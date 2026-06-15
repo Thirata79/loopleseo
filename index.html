@@ -1,0 +1,1747 @@
+<!DOCTYPE html><html lang=ja><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>ループル SEO・MEO改善提案書</title><style>
+:root{--blue:#2d6cdf;--ink:#1c2b3a;--sub:#5b6b7b;--line:#e3e8ee;--ok:#1b8a5a;--warn:#e08a00;--bad:#c62828;--bg:#f8fafc;}
+*{box-sizing:border-box;}
+body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",sans-serif;color:var(--ink);background:#eef1f5;margin:0;line-height:1.75;}
+.wrap{max-width:880px;margin:0 auto;background:#fff;box-shadow:0 2px 24px rgba(0,0,0,.08);}
+.cover{background:linear-gradient(150deg,#2d6cdf,#1c2b3a);color:#fff;padding:64px 46px;}
+.cover .kicker{font-size:12px;letter-spacing:3px;opacity:.85;margin-bottom:16px;}
+.cover h1{font-size:32px;margin:0 0 8px;border:none;color:#fff;line-height:1.4;}
+.cover .client{font-size:17px;font-weight:700;margin-top:20px;}
+.cover .url{font-size:13px;opacity:.85;}
+.cover .score{display:inline-block;margin-top:24px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);border-radius:10px;padding:10px 20px;}
+.cover .score b{font-size:26px;} .cover .score span{font-size:12px;opacity:.85;}
+.cover .foot{margin-top:34px;font-size:12px;opacity:.85;line-height:1.9;}
+.body{padding:34px 46px;}
+.toc{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:18px 24px;margin-bottom:10px;}
+.toc h2{margin-top:6px;}
+.toc ol{font-size:14px;line-height:2;padding-left:22px;}
+.toc a{color:var(--blue);text-decoration:none;} .toc a:hover{text-decoration:underline;}
+.toc .grp{list-style:none;margin-left:-18px;font-weight:800;color:var(--blue);margin-top:12px;font-size:13.5px;}
+.chapter{border-top:2px dashed var(--line);padding-top:18px;margin-top:34px;}
+.toplink{display:inline-block;margin:18px 0 0;font-size:12px;color:var(--blue);text-decoration:none;}
+h1{font-size:21px;border-bottom:3px solid var(--blue);padding-bottom:9px;margin:0 0 14px;}
+h2{font-size:17px;margin:26px 0 10px;padding-left:10px;border-left:5px solid var(--blue);}
+h2.fire{border-left-color:var(--warn);color:#b56a00;}
+h3{font-size:14px;margin:18px 0 7px;color:#33404d;}
+p,li{font-size:13.5px;} a{color:var(--blue);word-break:break-all;}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:12.5px;}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top;}
+th{background:#f1f5fb;color:var(--sub);}
+code{background:#f3f5f8;border:1px solid #e7ebf0;border-radius:4px;padding:1px 5px;font-size:12px;font-family:Menlo,Consolas,monospace;}
+pre{background:#1e2733;color:#e6edf3;border-radius:8px;padding:15px 17px;overflow-x:auto;font-size:12px;line-height:1.6;}
+pre code{background:none;border:none;color:inherit;padding:0;}
+blockquote{margin:12px 0;padding:9px 15px;background:#fff7ec;border-left:4px solid #ffcf7a;border-radius:0 6px 6px 0;font-size:12.5px;color:#5b4a2c;}
+blockquote strong{color:#b56a00;}
+hr{border:none;border-top:1px solid var(--line);margin:22px 0;}
+ul,ol{padding-left:22px;} li{margin:4px 0;} strong{color:#11202e;}
+/* diagnosis specific */
+.hero{display:flex;gap:16px;align-items:center;margin:16px 0 6px;flex-wrap:wrap;}
+.score-box{flex:0 0 165px;text-align:center;border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--bg);}
+.score-box .lbl{font-size:10px;color:var(--sub);letter-spacing:1px;}
+.score-box .num{font-size:40px;font-weight:800;line-height:1;}.score-box .num small{font-size:14px;color:#8a97a4;}
+.badge{display:inline-block;margin-top:6px;padding:4px 14px;border-radius:20px;color:#fff;font-weight:700;font-size:11px;background:var(--warn);}
+.radar{flex:1;text-align:center;min-width:280px;}
+.cards{display:flex;gap:7px;margin:8px 0;flex-wrap:wrap;}
+.card{flex:1;min-width:110px;border:1px solid var(--line);border-radius:8px;padding:8px;text-align:center;}
+.card-pct{font-size:18px;font-weight:800;}.card-pct small{font-size:10px;}
+.card-name{font-size:9.5px;color:#33404d;font-weight:700;}.card-score{font-size:9px;color:#7a8794;}
+.legend{font-size:10px;color:var(--sub);}
+.mk-ok{color:var(--ok);font-weight:800;}.mk-bad{color:var(--bad);font-weight:800;}.mk-mid{color:var(--warn);font-weight:800;}
+.prio{background:#fff7ec;border:2px solid #ffcf7a;border-radius:10px;padding:6px 18px 12px;margin:10px 0;}
+.prio ol{padding-left:18px;}.prio li{margin:7px 0;font-size:12.5px;}
+.pri-tag{display:inline-block;font-size:10px;font-weight:700;color:#fff;background:var(--bad);border-radius:4px;padding:1px 6px;margin-right:5px;}
+.pri-tag.now{background:var(--warn);}.pri-tag.mid{background:var(--blue);}
+.diag{background:#fff7ec;border:1px solid #ffd99b;border-radius:8px;padding:10px 13px;font-size:12.5px;margin:10px 0;color:#5b4a2c;}
+.good{background:#eef8f1;border:1px solid #b6e0c4;border-radius:8px;padding:10px 13px;font-size:12.5px;margin:10px 0;color:#1d5b39;}
+.meta,.sub{font-size:11px;color:var(--sub);}
+@media print{body{background:#fff;}.wrap{box-shadow:none;}.chapter{page-break-before:always;border-top:none;}}
+@media(max-width:560px){.cover{padding:40px 22px;}.body{padding:22px 18px;}}
+</style></head><body><a id=top></a><div class=wrap><div class="cover">
+ <div class="kicker">WEBSITE AUDIT &amp; GROWTH PROPOSAL</div>
+ <h1>ホームページ<br>SEO・MEO改善提案書</h1>
+ <div class="client">麻布十番ループル治療院 様</div>
+ <div class="url">www.loople.jp</div>
+ <div class="score"><b>総合スコア 63</b> <span>/100　評価：要改善</span></div>
+ <div class="foot">診断日：2026年6月15日<br>サイト診断・技術監査・検索/マップ実査・キーワード母数分析の統合提案</div>
+</div><div class="body"><div class="toc"><h2>目次</h2><ol>
+<li class="grp">第1部　診断</li>
+<li><a href="#ch1">総合診断レポート</a></li>
+<li class="grp">第2部　サイト改善の実装ガイド</li>
+<li><a href="#ch2">HTTPS化 手順書</a></li>
+<li><a href="#ch3">構造化データ(JSON-LD) 実装ガイド</a></li>
+<li><a href="#ch4">OGP設定ガイド</a></li>
+<li><a href="#ch5">H1・見出し設定ガイド</a></li>
+<li><a href="#ch6">見出し階層ガイド</a></li>
+<li class="grp">第3部　集客・SEO/MEO戦略</li>
+<li><a href="#ch7">キーワード設定ガイド</a></li>
+<li><a href="#ch8">チェックすべきキーワード一覧</a></li>
+<li><a href="#ch9">キーワード母数の取得手順</a></li>
+<li><a href="#ch10">母数分析・優先度ランキング</a></li>
+<li><a href="#ch11">投資優先度マップ</a></li>
+<li><a href="#ch12">MEO最適化チェックリスト</a></li>
+</ol></div><div class="chapter" id="ch1">
+
+<header>
+  <div>
+    <h1>ホームページ総合診断レポート <span style="color:var(--blue);font-size:15px;">v2</span></h1>
+    <div class="sub">麻布十番ループル治療院 ／ <span style="color:var(--blue)">www.loople.jp</span></div>
+  </div>
+  <div class="meta">診断日: 2026年6月15日<br>初回診断＋追加監査＋集客分析の統合版</div>
+</header>
+
+<div class="hero">
+  <div class="score-box">
+    <div class="lbl">総合スコア</div>
+    <div class="num">63<small>/100</small></div>
+    <div class="badge">要改善</div>
+  </div>
+  <div class="radar">
+    <svg width="430" height="330" viewBox="0 0 430 330" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="215,135.5 244.5,165 215,194.5 185.5,165" fill="none" stroke="#dfe3e8"/>
+      <polygon points="215,106 274,165 215,224 156,165" fill="none" stroke="#dfe3e8"/>
+      <polygon points="215,76.5 303.5,165 215,253.5 126.5,165" fill="none" stroke="#dfe3e8"/>
+      <polygon points="215,47 333,165 215,283 97,165" fill="none" stroke="#dfe3e8"/>
+      <line x1="215" y1="165" x2="215" y2="47" stroke="#dfe3e8"/>
+      <line x1="215" y1="165" x2="333" y2="165" stroke="#dfe3e8"/>
+      <line x1="215" y1="165" x2="215" y2="283" stroke="#dfe3e8"/>
+      <line x1="215" y1="165" x2="97" y2="165" stroke="#dfe3e8"/>
+      <polygon points="215,127.2 300,165 215,273.6 158.4,165" fill="rgba(45,108,223,0.22)" stroke="#2d6cdf" stroke-width="2.2"/>
+      <circle cx="215" cy="127.2" r="3.5" fill="#2d6cdf"/>
+      <circle cx="300" cy="165" r="3.5" fill="#2d6cdf"/>
+      <circle cx="215" cy="273.6" r="3.5" fill="#2d6cdf"/>
+      <circle cx="158.4" cy="165" r="3.5" fill="#2d6cdf"/>
+      <text x="215" y="33" font-size="12.5" fill="#33404d" text-anchor="middle" font-weight="700">SEO基礎</text>
+      <text x="343" y="169" font-size="12.5" fill="#33404d" text-anchor="start" font-weight="700">速度/モバイル</text>
+      <text x="215" y="305" font-size="12.5" fill="#33404d" text-anchor="middle" font-weight="700">店舗情報</text>
+      <text x="87" y="169" font-size="12.5" fill="#33404d" text-anchor="end" font-weight="700">セキュリティ</text>
+    </svg>
+  </div>
+</div>
+
+<div class="cards">
+  <div class="card"><div class="card-pct" style="color:#c62828">32<small>%</small></div><div class="card-name">A. SEO基礎</div><div class="card-score">8/25点</div></div>
+  <div class="card"><div class="card-pct" style="color:#e08a00">72<small>%</small></div><div class="card-name">B. 速度・モバイル</div><div class="card-score">18/25点</div></div>
+  <div class="card"><div class="card-pct" style="color:#1b8a5a">92<small>%</small></div><div class="card-name">C. 店舗情報</div><div class="card-score">27.5/30点</div></div>
+  <div class="card"><div class="card-pct" style="color:#c62828">48<small>%</small></div><div class="card-name">D. セキュリティ/技術</div><div class="card-score">9.5/20点</div></div>
+</div>
+<div class="legend">評価: 90〜100 優良 ／ 70〜89 良好 ／ 50〜69 要改善 ／ 〜49 早急な対応推奨</div>
+
+<div class="good"><strong>総評</strong>：コンテンツ・店舗情報・口コミ資産は地域トップ級（口コミ4.9・251件）。一方で<strong>テクニカルSEOと集客の「土台」に大きな伸びしろ</strong>。「中身は良いのに、見つけてもらう仕組みが弱い」状態です。</div>
+
+<h2 class="fire">★ 改善ロードマップ（優先順位）</h2>
+<div class="prio">
+<ol>
+  <li><span class="pri-tag now">今すぐ・無料</span><strong>MEOカテゴリ修正</strong> — GBPのカテゴリが「整体」のみ。母数最大「マッサージ(5000)」「鍼灸(500)」のマップ検索で圏外の原因。鍼灸院／マッサージ店／美容鍼を追加。4.9・251件の武器が一気に効く。</li>
+  <li><span class="pri-tag">必須</span><strong>HTTPS化</strong> — httpsで接続不可。個人情報・医療情報を扱うため信頼性・コンプラ・SEOで必須。S3配信のためCloudFront＋ACMで対応（時間がかかるので早期着手）。</li>
+  <li><span class="pri-tag mid">SEO土台</span><strong>構造化データ(LocalBusiness)＋sitemap.xml/robots.txt設置</strong> — いずれも未設置（404）。検索の店舗情報枠・インデックス効率に直結。</li>
+  <li><span class="pri-tag mid">集客</span><strong>美容鍼ページ新設</strong> — 母数500×口コミでも15回言及。専用ページ無し＝機会損失。単価・女性客に直結。</li>
+  <li><span class="pri-tag mid">SEO</span><strong>meta description個別化・OGP・H1/見出し整理・alt修正</strong> — 全ページ同一description、OGP無し、h1が7個、画像alt 20個が「#」。</li>
+  <li><span class="pri-tag">信頼</span><strong>プライバシーポリシー掲載</strong> — フォーム・問診票で個人情報を収集するのに不在。</li>
+</ol>
+</div>
+
+<h2>A. SEO基礎 <span style="color:#c62828;font-size:14px;">8 / 25点</span></h2>
+<table>
+<tr><th>項目</th><th>判定</th><th>所見</th></tr>
+<tr><td>titleタグ</td><td class="mk-mid">△</td><td>ページ別に設定済みで適切。トップは地域＋業種キーワードを強化余地。</td></tr>
+<tr><td>meta description</td><td class="mk-bad">×</td><td>全6ページで<strong>同一</strong>。ページごとに最適化が必要。</td></tr>
+<tr><td>h1・見出し階層</td><td class="mk-bad">×</td><td>トップにh1が7個（POINT/NEWS等を乱用）。1ページ1つ＋h2/h3階層へ。</td></tr>
+<tr><td>OGP / Twitterカード</td><td class="mk-bad">×</td><td>未設定。SNS共有時にタイトル・画像が出ない。</td></tr>
+<tr><td>構造化データ(LocalBusiness)</td><td class="mk-bad">×</td><td>未実装。店舗情報枠・口コミ表示で不利。最優先級。</td></tr>
+<tr><td>画像alt</td><td class="mk-bad">×</td><td>主要画像20点のaltが「#」のダミー値。</td></tr>
+<tr><td>canonical / keywords</td><td class="mk-mid">△</td><td>canonical無し。metaキーワードは設定済みだが現在SEO効果なし。</td></tr>
+</table>
+
+<h2>B. 表示速度・モバイル対応 <span style="color:#e08a00;font-size:14px;">18 / 25点</span></h2>
+<table>
+<tr><th>項目</th><th>判定</th><th>所見</th></tr>
+<tr><td>viewport(レスポンシブ)</td><td class="mk-ok">○</td><td>設定あり。モバイル土台はOK。</td></tr>
+<tr><td>Core Web Vitals(CLS)</td><td class="mk-ok">○</td><td>レイアウトずれCLS=0（優秀）。</td></tr>
+<tr><td>表示速度(LCP)</td><td class="mk-mid">△</td><td>サーバ応答47ms・表示完了約1.6秒と良好な部類。※精密値はPSI APIキー要。</td></tr>
+<tr><td>画像最適化・総重量</td><td class="mk-mid">△</td><td>85リクエスト・画像29点と多め。電話番号・営業時間まで画像化。WebP化・文字化を。</td></tr>
+</table>
+
+<h2>C. 店舗情報の充実度 <span style="color:#1b8a5a;font-size:14px;">27.5 / 30点</span>（強み）</h2>
+<table>
+<tr><th>項目</th><th>判定</th><th>所見</th></tr>
+<tr><td>住所・電話(tel:)・地図</td><td class="mk-ok">○</td><td>住所明記、tel:リンク、Googleマップ埋め込み（駐車場案内まで充実）。</td></tr>
+<tr><td>予約・問い合わせ導線</td><td class="mk-ok">○</td><td>フォーム＋電話＋問診票。ただし常設「予約ボタン」が弱く分散（要改善）。</td></tr>
+<tr><td>メニュー・料金</td><td class="mk-ok">○</td><td>明記（トータルケア60分11,000円〜）。</td></tr>
+<tr><td>SNSリンク</td><td class="mk-ok">○</td><td>Instagram・Facebook・Twitter。</td></tr>
+<tr><td>営業時間</td><td class="mk-mid">△</td><td>表示はあるが画像で、テキスト/schemaなし。求人ページと表記揺れ（10:00〜19:00 / 9:00〜19:00）。</td></tr>
+</table>
+
+<h2>D. セキュリティ・技術面 <span style="color:#c62828;font-size:14px;">9.5 / 20点</span></h2>
+<table>
+<tr><th>項目</th><th>判定</th><th>所見</th></tr>
+<tr><td>HTTPS対応</td><td class="mk-bad">×</td><td>httpsで接続不可。「保護されていない通信」警告。最優先。</td></tr>
+<tr><td>リンク切れ</td><td class="mk-ok">○</td><td>主要内部リンク正常。</td></tr>
+<tr><td>古い技術・著作年</td><td class="mk-ok">○</td><td>Flash等なし、更新も最新。</td></tr>
+<tr><td>favicon</td><td class="mk-mid">△</td><td>未設定。タブ・ブックマークでブランド非表示。</td></tr>
+</table>
+
+<h2>追加で判明した技術課題（深掘り監査）</h2>
+<table>
+<tr><th>課題</th><th>状態</th><th>影響</th></tr>
+<tr><td>robots.txt</td><td class="mk-bad">404（無し）</td><td>クローラー制御の基本ファイル欠如。</td></tr>
+<tr><td>sitemap.xml</td><td class="mk-bad">404（無し）</td><td>インデックス効率の低下。設置＋Search Console登録を。</td></tr>
+<tr><td>hreflang(日英)</td><td class="mk-bad">無し</td><td>日本語/英語ページの出し分けができない。</td></tr>
+<tr><td>プライバシーポリシー</td><td class="mk-bad">無し</td><td>個人情報・医療情報を収集するのに方針未掲載。信頼性・コンプラ上要対応。</td></tr>
+<tr><td>活動実績の鮮度</td><td class="mk-mid">2024年止まり</td><td>NEWSは2026年まで更新。強みなのに実績が古い。</td></tr>
+<tr><td>英語ページ</td><td class="mk-mid">情報量不足</td><td>スタッフ3名/メニュー2種のみ、電話が非tel:、誤訳あり。訪日需要を取りこぼし。</td></tr>
+<tr><td>配信環境</td><td>Amazon S3直配信</td><td>WordPressではなく静的HTML。修正はHTML直編集＋HTTPS化はCloudFront＋ACM。</td></tr>
+</table>
+
+<h2>検索・集客分析（キーワード母数 × 順位）</h2>
+<p style="font-size:13.5px;">Google広告の母数データ（2025/6〜2026/5・バケット表示）と実検索の順位。</p>
+<table>
+<tr><th>キーワード</th><th>母数(月間)</th><th>オーガニック順位</th><th>狙い方</th></tr>
+<tr><td>麻布十番 マッサージ</td><td>5000（最大）</td><td class="mk-bad">圏外</td><td>MEO＋ポータルで回収</td></tr>
+<tr><td>麻布十番 鍼灸</td><td>500</td><td class="mk-mid">8位前後</td><td>自サイトSEOで上位化</td></tr>
+<tr><td>麻布十番 美容鍼 / 美容鍼 港区</td><td>各500</td><td>未確認</td><td>専用ページ新設（機会大）</td></tr>
+<tr><td>麻布十番 整体 / 港区 鍼灸 等</td><td>各500</td><td>圏外/未確認</td><td>中期</td></tr>
+<tr><td>麻布十番 スポーツマッサージ</td><td>50</td><td class="mk-ok">4位前後</td><td>強み・低コスト維持</td></tr>
+<tr><td>麻布十番 肩こり/腰痛/頭痛</td><td>各50（小）</td><td class="mk-bad">圏外</td><td>症状別まとめページで面取り</td></tr>
+</table>
+
+<h2>MEO（Googleマップ）実査 — 2026-06-15</h2>
+<div class="diag">
+<strong>評価は地域トップ級なのに、カテゴリ設定で損をしている。</strong><br><br>
+・口コミ <strong>4.9（251件）</strong>、オーナー返信ほぼ全件、投稿も最新（日英）＝運用は理想的。<br>
+・しかし<strong>カテゴリが「整体」のみ</strong>。「マッサージ」「鍼灸」のマップ検索で<strong>圏外</strong>。上位競合は「鍼灸院」「指圧・マッサージ」で登録済み。<br>
+・口コミタグに「美容鍼15件」＝美容鍼の需要が実証されている。<br>
+→ <strong>カテゴリに鍼灸院/マッサージ店/美容鍼を追加するのが、最小工数・最大効果の一手。</strong>
+</div>
+
+<div class="footer">
+本レポートは www.loople.jp のトップ＋主要下層ページの自動診断、追加の技術監査、Google検索・マップ実査、キーワード母数データ（Google広告）を統合したものです。表示速度の一部指標(LCP等)はPageSpeed Insights APIキー未取得のため簡易計測値です。<br>
+麻布十番ループル治療院 総合診断レポート v2 ／ 発行: 2026年6月15日
+</div>
+
+<a class="toplink" href="#top">▲ 目次に戻る</a></div><div class="chapter" id="ch2"><h1>麻布十番ループル治療院 — HTTPS化 手順書</h1>
+<p>作成日: 2026-06-15 / 対象: http://www.loople.jp/</p>
+<h2>0. 現状（確認済み）</h2>
+<ul>
+<li>レスポンスヘッダー <code>server: AmazonS3</code>。<strong>Amazon S3 から直接HTTP配信</strong>されている。</li>
+<li>CloudFront（CDN）を経由していない（キャッシュ系ヘッダーなし）。</li>
+<li><code>https://www.loople.jp/</code> は接続不可（証明書がないためエラー）。</li>
+</ul>
+<p><strong>重要</strong>: S3の静的ウェブサイトホスティングは、それ単体では <strong>HTTPS（独自ドメインのSSL）に対応していません</strong>。
+HTTPS化するには、S3の前に <strong>CloudFront（CDN）＋ ACM（無料SSL証明書）</strong> を置く構成にするのが標準的な解決策です。
+※AWSの作業になるため、AWSアカウントを管理している制作会社／インフラ担当者に依頼するのが確実です。</p>
+<hr />
+<h2>1. 全体構成（移行後の姿）</h2>
+<pre><code>利用者 ──https──▶ CloudFront（SSL証明書をここに設置／HTTP→HTTPS自動リダイレクト）──▶ S3バケット（既存のHTMLファイル）
+                         ▲
+                      ACM（無料SSL証明書）
+DNS: www.loople.jp / loople.jp ──▶ CloudFront
+</code></pre>
+<p>既存のS3のファイルはそのまま使えます。配信経路を変えるイメージです。</p>
+<hr />
+<h2>2. 手順</h2>
+<h3>STEP 1. SSL証明書を取得（ACM）</h3>
+<ul>
+<li>AWS Certificate Manager で証明書をリクエスト。</li>
+<li><strong>リージョンは必ず「米国東部（バージニア北部）us-east-1」</strong>で発行する（CloudFront用の証明書はus-east-1必須）。</li>
+<li>ドメインは <strong><code>www.loople.jp</code> と <code>loople.jp</code> の両方</strong>を登録（apexドメインも将来使うため）。</li>
+<li>検証方法は <strong>DNS検証</strong>（推奨）。表示されたCNAMEレコードをDNSに追加すると自動承認。<strong>料金は無料</strong>。</li>
+</ul>
+<h3>STEP 2. CloudFrontディストリビューションを作成</h3>
+<ul>
+<li>オリジン: 既存のS3バケット（静的ウェブサイトエンドポイント）。</li>
+<li><strong>Viewer protocol policy: 「Redirect HTTP to HTTPS」</strong>（←これでHTTP→HTTPS自動リダイレクトになる）。</li>
+<li>代替ドメイン名（CNAMEs）: <code>www.loople.jp</code>（必要なら <code>loople.jp</code> も）。</li>
+<li>SSL証明書: STEP 1 で発行した ACM 証明書を選択。</li>
+<li>デフォルトルートオブジェクト: <code>index.html</code>。</li>
+</ul>
+<h3>STEP 3. DNSをCloudFrontに向ける</h3>
+<ul>
+<li>DNS管理画面（Route 53 など）で、<code>www.loople.jp</code> を <strong>CloudFrontのドメイン（xxxx.cloudfront.net）に向ける</strong>。</li>
+<li>Route 53 なら <strong>Aliasレコード</strong>、他社DNSなら CNAME。</li>
+<li><code>loople.jp</code>（wwwなし）も使うなら、wwwへリダイレクトする設定を併せて行う。</li>
+</ul>
+<h3>STEP 4. サイト内の混在コンテンツを解消（ここが見落としやすい）</h3>
+<p>HTTPSページの中に <code>http://</code> のリンクや画像があると「混在コンテンツ」警告で鍵マークが出ません。
+- HTML内の自サイト参照を <code>http://www.loople.jp/...</code> → <code>https://www.loople.jp/...</code> に置換。
+- 外部読み込み（TripAdvisor・Carecle・GA/GTM・Facebook・Twitter・Typekit等）が <code>http://</code> の場合は <code>https://</code> に。
+- 迷う場合はプロトコル相対（<code>//...</code>）でも可。
+- 先に作成した <strong>JSON-LD・OGPタグ内のURLも <code>https://</code> に統一</strong>。</p>
+<h3>STEP 5. 確認</h3>
+<ul>
+<li><code>https://www.loople.jp/</code> が鍵マーク付きで表示される。</li>
+<li><code>http://www.loople.jp/</code> にアクセスすると <strong>httpsへ自動リダイレクト</strong>される。</li>
+<li>ブラウザの開発者ツール（Console / Security）で<strong>混在コンテンツ警告が出ない</strong>。</li>
+<li><a href="https://www.ssllabs.com/ssltest/">SSL Labs</a> でA以上を確認。</li>
+</ul>
+<hr />
+<h2>3. 移行後にやるSEO作業（重要）</h2>
+<p>HTTPSは「URLが変わる」のと同じ扱いです。以下をセットで行うと評価を引き継げます。</p>
+<ol>
+<li><strong>Google Search Console</strong> に <code>https://www.loople.jp/</code> のプロパティを追加。</li>
+<li><strong>sitemap.xml を https のURL</strong>で作り直し、Search Consoleに再送信。</li>
+<li>各ページの <strong>canonical / OGP / 構造化データのURLを https</strong> に統一。</li>
+<li><strong>Googleビジネスプロフィール</strong>やSNS・各種ポータルに登録したサイトURLを https に更新。</li>
+<li>リダイレクトが安定して動いていることを確認後、必要なら <strong>HSTS</strong> を有効化（最初から入れない。リダイレクト確認後に）。</li>
+</ol>
+<hr />
+<h2>4. 補足</h2>
+<ul>
+<li><strong>費用</strong>: ACM証明書は無料。CloudFrontは従量課金だが、この規模のサイトなら月数十円〜数百円程度（無料枠もあり）。</li>
+<li><strong>ダウンタイム</strong>: DNS切替時に多少の反映待ち（数分〜最大48時間）があるため、アクセスの少ない時間帯の作業を推奨。</li>
+<li><strong>AWSを使わない選択肢</strong>: どうしてもAWS運用が難しい場合、HTTPSが標準で付くホスティング（独自ドメイン＋SSL自動対応のサービス）へサイトを引っ越す方法もあります。ただし現状の資産がS3にあるため、CloudFront追加が最小工数です。</li>
+</ul>
+<blockquote>
+<p>このHTTPS化が、診断で最優先に挙げた項目です。個人情報・医療情報を扱うフォーム／問診票があるため、
+信頼性・コンプライアンス・SEOのすべてに直結します。</p>
+</blockquote><a class="toplink" href="#top">▲ 目次に戻る</a></div><div class="chapter" id="ch3"><h1>麻布十番ループル治療院 — 構造化データ（JSON-LD）実装ガイド</h1>
+<p>作成日: 2026-06-15 / 更新: v2（母数データ反映） / 対象: http://www.loople.jp/</p>
+<blockquote>
+<p><strong>母数反映ポイント（v2）</strong>: キーワード母数調査の結果、需要が大きいのは「マッサージ（最大）」「鍼灸・整体・美容鍼（中）」でした。
+そのため description は <strong>鍼灸・マッサージ・美容鍼</strong> を含む語順に調整し、提供サービスに <strong>美容鍼</strong> を追加しています。</p>
+</blockquote>
+<h2>1. 設置方法</h2>
+<p>下記の <code>&lt;script&gt;</code> ブロックを、各ページの <code>&lt;head&gt;</code> 内（または <code>&lt;/body&gt;</code> 直前）にそのまま貼り付けます。
+<strong>トップページに1つ設置すれば、店舗情報（LocalBusiness）としては十分</strong>です。
+HTTPS化後は、内部の <code>http://</code> をすべて <code>https://</code> に置き換えてください。</p>
+<p>設置後は <a href="https://search.google.com/test/rich-results">Google リッチリザルトテスト</a> と
+<a href="https://validator.schema.org/">スキーマ検証ツール</a> でエラーがないか必ず確認します。</p>
+<hr />
+<h2>2. 店舗情報 本体（LocalBusiness / MedicalBusiness）</h2>
+<pre><code class="language-html">&lt;script type=&quot;application/ld+json&quot;&gt;
+{
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@type&quot;: [&quot;MedicalBusiness&quot;, &quot;LocalBusiness&quot;],
+  &quot;@id&quot;: &quot;https://www.loople.jp/#clinic&quot;,
+  &quot;name&quot;: &quot;麻布十番ループル治療院&quot;,
+  &quot;alternateName&quot;: &quot;Loople&quot;,
+  &quot;description&quot;: &quot;麻布十番駅徒歩1分の鍼灸・マッサージ・美容鍼の治療院。スポーツマッサージ・鍼灸・調整のトータルケアで心と身体を整えます。&quot;,
+  &quot;url&quot;: &quot;https://www.loople.jp/&quot;,
+  &quot;logo&quot;: &quot;https://www.loople.jp/【ロゴ画像のURLを指定】&quot;,
+  &quot;image&quot;: &quot;https://www.loople.jp/【店舗・施術の代表画像URLを指定】&quot;,
+  &quot;telephone&quot;: &quot;+81-3-6435-0613&quot;,
+  &quot;priceRange&quot;: &quot;¥¥¥&quot;,
+  &quot;currenciesAccepted&quot;: &quot;JPY&quot;,
+  &quot;address&quot;: {
+    &quot;@type&quot;: &quot;PostalAddress&quot;,
+    &quot;streetAddress&quot;: &quot;麻布十番4-6-8 NISSIN BLDG 5階&quot;,
+    &quot;addressLocality&quot;: &quot;港区&quot;,
+    &quot;addressRegion&quot;: &quot;東京都&quot;,
+    &quot;postalCode&quot;: &quot;106-0045&quot;,
+    &quot;addressCountry&quot;: &quot;JP&quot;
+  },
+  &quot;geo&quot;: {
+    &quot;@type&quot;: &quot;GeoCoordinates&quot;,
+    &quot;latitude&quot;: 35.6553,
+    &quot;longitude&quot;: 139.7363
+  },
+  &quot;hasMap&quot;: &quot;https://maps.app.goo.gl/【Googleマップの店舗URLを指定】&quot;,
+  &quot;openingHoursSpecification&quot;: [
+    {
+      &quot;@type&quot;: &quot;OpeningHoursSpecification&quot;,
+      &quot;dayOfWeek&quot;: [&quot;Monday&quot;,&quot;Tuesday&quot;,&quot;Wednesday&quot;,&quot;Thursday&quot;,&quot;Friday&quot;,&quot;Saturday&quot;,&quot;Sunday&quot;],
+      &quot;opens&quot;: &quot;10:00&quot;,
+      &quot;closes&quot;: &quot;19:00&quot;
+    }
+  ],
+  &quot;sameAs&quot;: [
+    &quot;https://www.instagram.com/loople10&quot;,
+    &quot;https://www.facebook.com/Loople-209380385912741&quot;,
+    &quot;https://twitter.com/Loople10&quot;
+  ],
+  &quot;areaServed&quot;: &quot;東京都港区麻布十番&quot;,
+  &quot;hasOfferCatalog&quot;: {
+    &quot;@type&quot;: &quot;OfferCatalog&quot;,
+    &quot;name&quot;: &quot;トータルケア（スポーツマッサージ・鍼灸・調整）&quot;,
+    &quot;itemListElement&quot;: [
+      {
+        &quot;@type&quot;: &quot;Offer&quot;,
+        &quot;itemOffered&quot;: { &quot;@type&quot;: &quot;Service&quot;, &quot;name&quot;: &quot;トータルケア 60分&quot; },
+        &quot;price&quot;: &quot;11000&quot;,
+        &quot;priceCurrency&quot;: &quot;JPY&quot;
+      },
+      {
+        &quot;@type&quot;: &quot;Offer&quot;,
+        &quot;itemOffered&quot;: { &quot;@type&quot;: &quot;Service&quot;, &quot;name&quot;: &quot;トータルケア 90分&quot; },
+        &quot;price&quot;: &quot;16500&quot;,
+        &quot;priceCurrency&quot;: &quot;JPY&quot;
+      },
+      {
+        &quot;@type&quot;: &quot;Offer&quot;,
+        &quot;itemOffered&quot;: { &quot;@type&quot;: &quot;Service&quot;, &quot;name&quot;: &quot;トータルケア 120分&quot; },
+        &quot;price&quot;: &quot;22000&quot;,
+        &quot;priceCurrency&quot;: &quot;JPY&quot;
+      },
+      {
+        &quot;@type&quot;: &quot;Offer&quot;,
+        &quot;itemOffered&quot;: { &quot;@type&quot;: &quot;Service&quot;, &quot;name&quot;: &quot;回数券 60分×5回&quot; },
+        &quot;price&quot;: &quot;48000&quot;,
+        &quot;priceCurrency&quot;: &quot;JPY&quot;
+      },
+      {
+        &quot;@type&quot;: &quot;Offer&quot;,
+        &quot;itemOffered&quot;: { &quot;@type&quot;: &quot;Service&quot;, &quot;name&quot;: &quot;美容鍼&quot; },
+        &quot;priceCurrency&quot;: &quot;JPY&quot;
+      }
+    ]
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<h3>差し替え・確認が必要な箇所</h3>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>現状の値</th>
+<th>対応</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>logo</code> / <code>image</code></td>
+<td>プレースホルダ</td>
+<td>実際の画像URLに差し替え（imageは横長・高解像度推奨）</td>
+</tr>
+<tr>
+<td><code>postalCode</code></td>
+<td>106-0045（麻布十番の郵便番号）</td>
+<td>念のため正式な番号を確認</td>
+</tr>
+<tr>
+<td><code>geo</code> 緯度経度</td>
+<td>麻布十番4-6-8 の概算値</td>
+<td>Googleマップで店舗ピンの正確な座標を取得して差し替え</td>
+</tr>
+<tr>
+<td><code>hasMap</code></td>
+<td>プレースホルダ</td>
+<td>アクセスページに埋め込み済みのGoogleマップURLを指定</td>
+</tr>
+<tr>
+<td><code>openingHoursSpecification</code></td>
+<td>全曜日 10:00–19:00</td>
+<td>「不定休」のため、定休日が固定でないならこの形でOK。休業日は Google ビジネスプロフィール側で随時管理</td>
+</tr>
+<tr>
+<td><code>@type</code></td>
+<td>MedicalBusiness + LocalBusiness</td>
+<td>鍼灸・マッサージ治療院に最も近い型。整体寄りなら "MedicalClinic" も可</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>3. 口コミ評価（AggregateRating）について ※要注意</h2>
+<p>口コミ資産は強みですが、<strong>AggregateRating の実装には Google のポリシー上の制約があります</strong>。</p>
+<ul>
+<li>Google・TripAdvisor・Carecle など<strong>第三者サイトの評価を自社サイトの構造化データに転記すると、ガイドライン違反（手動対策の対象）になる恐れ</strong>があります。リッチリザルトに表示されないだけでなく、ペナルティのリスクがあります。</li>
+<li>安全に星評価を出すには、<strong>自院サイト上で自前で集めた口コミ</strong>を、ページ上にも実際に表示したうえでマークアップする必要があります。</li>
+</ul>
+<p>そのため、まずは上記の店舗情報（LocalBusiness）のみを設置することを推奨します。
+自社収集の口コミを表示する運用に切り替えた場合のみ、下記を <code>LocalBusiness</code> 内に追加できます（<strong>数値は実データに必ず一致させること</strong>）。</p>
+<pre><code class="language-json">&quot;aggregateRating&quot;: {
+  &quot;@type&quot;: &quot;AggregateRating&quot;,
+  &quot;ratingValue&quot;: &quot;【実際の平均評価】&quot;,
+  &quot;reviewCount&quot;: &quot;【自社収集の件数】&quot;,
+  &quot;bestRating&quot;: &quot;5&quot;,
+  &quot;worstRating&quot;: &quot;1&quot;
+}
+</code></pre>
+<hr />
+<h2>4. 期待できる効果</h2>
+<ul>
+<li>Google検索・マップで、営業時間・住所・電話・地図がリッチに表示されやすくなる</li>
+<li>「麻布十番 鍼灸」「麻布十番 マッサージ」等のローカル検索で有利</li>
+<li>料金（OfferCatalog）やSNS連携（sameAs）も検索エンジンに正しく伝わる</li>
+</ul>
+<blockquote>
+<p>補足: 構造化データは「正しい情報を検索エンジンに伝える」もので、HTTPS化・sitemap.xml設置と併せて実施すると効果が最大化します。</p>
+</blockquote><a class="toplink" href="#top">▲ 目次に戻る</a></div><div class="chapter" id="ch4"><h1>麻布十番ループル治療院 — OGP（Open Graph）設定ガイド</h1>
+<p>作成日: 2026-06-15 / 更新: v2（母数データ反映） / 対象: http://www.loople.jp/（静的HTMLサイト）</p>
+<blockquote>
+<p><strong>母数反映ポイント（v2）</strong>: 需要が大きい「鍼灸・マッサージ・美容鍼」を og:title／description の語頭側に配置。
+「スポーツマッサージ」は強みだが母数が小さいため、頭の語より後ろに置く。美容鍼ページの行を追加。</p>
+</blockquote>
+<p>OGP は、FacebookやLINE・X(Twitter)などでURLが共有されたときに表示される
+「タイトル・説明・画像」を指定するための <code>&lt;meta&gt;</code> タグです。
+現在この設定が全ページ無いため、シェア時にタイトルや画像が正しく出ていません。</p>
+<hr />
+<h2>1. 設置方法（共通）</h2>
+<p>各HTMLファイルの <code>&lt;head&gt;</code> 内（<code>&lt;/head&gt;</code> の手前）に、下記タグを追加します。
+<strong>ページごとに <code>og:title</code> / <code>og:description</code> / <code>og:url</code> / <code>og:type</code> を変える</strong>のがポイントです。
+画像URL・ページURLは必ず <code>http(s)://</code> から始まる<strong>絶対パス</strong>で書きます（相対パス不可）。</p>
+<blockquote>
+<p>HTTPS化後は、すべての <code>http://</code> を <code>https://</code> に置き換えてください。</p>
+</blockquote>
+<pre><code class="language-html">&lt;!-- ▼ Open Graph (Facebook / LINE 等) --&gt;
+&lt;meta property=&quot;og:site_name&quot; content=&quot;麻布十番ループル治療院&quot;&gt;
+&lt;meta property=&quot;og:locale&quot; content=&quot;ja_JP&quot;&gt;
+&lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;
+&lt;meta property=&quot;og:title&quot; content=&quot;麻布十番の鍼灸・マッサージ・美容鍼｜ループル治療院&quot;&gt;
+&lt;meta property=&quot;og:description&quot; content=&quot;麻布十番駅徒歩1分の鍼灸・マッサージ・美容鍼。スポーツマッサージや調整も組み合わせたトータルケアで心と身体を整えます。&quot;&gt;
+&lt;meta property=&quot;og:url&quot; content=&quot;http://www.loople.jp/&quot;&gt;
+&lt;meta property=&quot;og:image&quot; content=&quot;http://www.loople.jp/【代表画像のURL】&quot;&gt;
+&lt;meta property=&quot;og:image:width&quot; content=&quot;1200&quot;&gt;
+&lt;meta property=&quot;og:image:height&quot; content=&quot;630&quot;&gt;
+
+&lt;!-- ▼ X(Twitter) カード --&gt;
+&lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;&gt;
+&lt;meta name=&quot;twitter:site&quot; content=&quot;@Loople10&quot;&gt;
+&lt;meta name=&quot;twitter:title&quot; content=&quot;麻布十番の鍼灸・マッサージ・美容鍼｜ループル治療院&quot;&gt;
+&lt;meta name=&quot;twitter:description&quot; content=&quot;麻布十番駅徒歩1分の鍼灸・マッサージ・美容鍼。スポーツマッサージや調整も組み合わせたトータルケアで心と身体を整えます。&quot;&gt;
+&lt;meta name=&quot;twitter:image&quot; content=&quot;http://www.loople.jp/【代表画像のURL】&quot;&gt;
+</code></pre>
+<hr />
+<h2>2. og:image（シェア画像）の要件 ※最重要</h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>推奨</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>サイズ</td>
+<td><strong>1200 × 630 px</strong>（横長）。これより小さいと縮小表示・非表示になる</td>
+</tr>
+<tr>
+<td>形式</td>
+<td>JPG または PNG</td>
+</tr>
+<tr>
+<td>容量</td>
+<td>5MB以下（できれば300KB前後）</td>
+</tr>
+<tr>
+<td>内容</td>
+<td>ロゴ＋院の外観や施術風景。文字を入れる場合は中央寄せで大きく</td>
+</tr>
+<tr>
+<td>URL</td>
+<td>絶対パス。<code>twitter:image</code> も同じ画像でOK</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>専用のシェア画像（例: <code>ogp.jpg</code>）を1枚作ってサイトにアップし、全ページ共通で使うのが手軽です。
+ページごとに変えたい場合のみ、各ページの画像URLを差し替えます。</p>
+</blockquote>
+<hr />
+<h2>3. ページ別の設定値（コピペ用）</h2>
+<p><code>og:title</code> は「ページ内容＋院名」、<code>og:description</code> はそのページに即した文章にします。
+（meta description と同じ文言を流用してOK）</p>
+<table>
+<thead>
+<tr>
+<th>ページ</th>
+<th>og:type</th>
+<th>og:url</th>
+<th>og:title</th>
+<th>og:description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>トップ</td>
+<td>website</td>
+<td>http://www.loople.jp/</td>
+<td>麻布十番の鍼灸・マッサージ・美容鍼｜ループル治療院</td>
+<td>麻布十番駅徒歩1分の鍼灸・マッサージ・美容鍼。スポーツマッサージや調整も組み合わせたトータルケアで心と身体を整えます。</td>
+</tr>
+<tr>
+<td>メニュー</td>
+<td>website</td>
+<td>http://www.loople.jp/menu/</td>
+<td>メニュー・料金｜麻布十番の鍼灸・マッサージ</td>
+<td>トータルケア60分11,000円〜。スポーツマッサージ・鍼灸・調整を組み合わせたオリジナル施術の料金一覧。</td>
+</tr>
+<tr>
+<td>美容鍼（新設推奨）</td>
+<td>website</td>
+<td>http://www.loople.jp/biyoubari/</td>
+<td>美容鍼｜麻布十番ループル治療院</td>
+<td>麻布十番で美容鍼。お肌のハリ・むくみ・小顔ケアに。有資格者による施術で心地よく整えます。</td>
+</tr>
+<tr>
+<td>スタッフ</td>
+<td>website</td>
+<td>http://www.loople.jp/staff/</td>
+<td>スタッフ紹介｜麻布十番ループル治療院</td>
+<td>鍼灸マッサージ師・柔道整復師・アスレティックトレーナーなど有資格者11名が専門的にケアします。</td>
+</tr>
+<tr>
+<td>アクセス</td>
+<td>website</td>
+<td>http://www.loople.jp/access/</td>
+<td>アクセス｜麻布十番ループル治療院</td>
+<td>東京メトロ南北線・都営大江戸線「麻布十番駅」徒歩1分。駐車場情報も掲載しています。</td>
+</tr>
+<tr>
+<td>活動実績</td>
+<td>website</td>
+<td>http://www.loople.jp/results/</td>
+<td>活動実績｜麻布十番ループル治療院</td>
+<td>プロアスリートやアーティストへの帯同実績を多数掲載。豊富な経験を持つ治療院です。</td>
+</tr>
+<tr>
+<td>お知らせ記事</td>
+<td>article</td>
+<td>（各記事URL）</td>
+<td>（記事タイトル）｜麻布十番ループル治療院</td>
+<td>（記事の要約）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>ニュース／ブログの個別記事だけは <code>og:type</code> を <strong>article</strong> にします。</p>
+</blockquote>
+<hr />
+<h2>4. 設置後の確認方法</h2>
+<ol>
+<li><strong>Facebookシェアデバッガー</strong> … https://developers.facebook.com/tools/debug/
+   URLを入力 →「もう一度スクレイピング」で最新のOGPを反映・確認。</li>
+<li><strong>X(Twitter) Card Validator</strong> または実際にXで投稿プレビューを確認。</li>
+<li>LINEは、トークにURLを貼ってプレビュー（カード表示）が出るか確認。</li>
+</ol>
+<blockquote>
+<p>キャッシュが残るため、修正後はFacebookデバッガーでURLを再スクレイピングすると確実です。</p>
+</blockquote>
+<hr />
+<h2>5. 補足</h2>
+<ul>
+<li>OGPタグは構造化データ（JSON-LD）とは別物です。<strong>両方設定して効果が出ます</strong>（OGP=SNS表示、JSON-LD=検索結果表示）。</li>
+<li>静的サイトのため、各HTMLを直接編集します。テンプレート（共通ヘッダー）があるなら、共通部分（og:site_name / og:image / twitter:site）はそこに、可変部分（og:title / og:url / og:description）は各ページに置くと管理が楽です。</li>
+<li>英語ページ（/english/）は <code>og:locale</code> を <code>en_US</code> にし、英語の title/description を設定してください。</li>
+</ul><a class="toplink" href="#top">▲ 目次に戻る</a></div><div class="chapter" id="ch5"><h1>麻布十番ループル治療院 — H1・見出し設定ガイド</h1>
+<p>作成日: 2026-06-15 / 更新: v2（母数データ反映） / 対象: http://www.loople.jp/（静的HTMLサイト）</p>
+<blockquote>
+<p><strong>母数反映ポイント（v2）</strong>: h1には需要の大きい「鍼灸・マッサージ」を優先的に入れる（スポーツマッサージは強みだが母数小なので後ろ）。美容鍼ページのh1を追加。</p>
+</blockquote>
+<h2>1. 基本ルール（3つだけ）</h2>
+<ol>
+<li><strong>h1は1ページに1つ</strong>。そのページが「何のページか」を表す主題を入れる。</li>
+<li><strong>見出しは階層順に</strong>。h1 →（その中の大見出し）h2 →（さらに細目）h3。順番を飛ばさない。</li>
+<li><strong>見た目の大きさで決めない</strong>。文字サイズはCSSで調整する。装飾のためにh1を使わない。</li>
+</ol>
+<blockquote>
+<p>検索エンジンは見出しタグでページの構造を理解します。h1が複数あったり階層が崩れていると、
+「どこが主題か」が伝わらず、SEO評価が下がります。</p>
+</blockquote>
+<hr />
+<h2>2. 現状の問題（トップページ）</h2>
+<p>トップページに <strong>h1が7個</strong> 入っています:</p>
+<pre><code>h1: Loopleではお客様にあわせた丁寧なケアをします
+h1: POINT
+h1: NEWS
+h1: GOODS
+h1: SNS
+h1: CONTACT
+h1: New Agent   ← 外部チャット/問診ウィジェットが出力している可能性大（要確認）
+</code></pre>
+<p>「POINT / NEWS / GOODS / SNS / CONTACT」はセクションのラベルなので、本来 <strong>h2</strong> にすべきです。
+正しくは「h1は1つ、各セクション見出しはh2、その中の小見出しはh3」という構造にします。</p>
+<hr />
+<h2>3. トップページの修正案（Before → After）</h2>
+<h3>Before（誤り）</h3>
+<pre><code class="language-html">&lt;h1&gt;Loopleではお客様にあわせた丁寧なケアをします&lt;/h1&gt;
+...
+&lt;h1&gt;POINT&lt;/h1&gt;
+  &lt;h2&gt;確かな技術&lt;/h2&gt;
+  &lt;h2&gt;誠実な対応&lt;/h2&gt;
+  &lt;h2&gt;豊富な経験&lt;/h2&gt;
+&lt;h1&gt;NEWS&lt;/h1&gt;
+&lt;h1&gt;GOODS&lt;/h1&gt;
+&lt;h1&gt;SNS&lt;/h1&gt;
+&lt;h1&gt;CONTACT&lt;/h1&gt;
+</code></pre>
+<h3>After（正しい階層）</h3>
+<pre><code class="language-html">&lt;!-- ページの主題：1つだけ。地域＋業種のキーワードを入れる --&gt;
+&lt;h1&gt;麻布十番の鍼灸・マッサージ・スポーツマッサージ｜ループル治療院&lt;/h1&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;POINT｜ループルの特徴&lt;/h2&gt;
+    &lt;h3&gt;確かな技術&lt;/h3&gt;
+    &lt;h3&gt;誠実な対応&lt;/h3&gt;
+    &lt;h3&gt;豊富な経験&lt;/h3&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;NEWS｜お知らせ&lt;/h2&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;GOODS｜ループル公式グッズ&lt;/h2&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;SNS&lt;/h2&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;CONTACT｜お問い合わせ&lt;/h2&gt;
+&lt;/section&gt;
+</code></pre>
+<p>ポイント:
+- h1を、キャッチコピーから <strong>「麻布十番＋業種」を含む主題</strong> に変更（SEOで効く）。キャッチコピーはh1にせず通常テキスト/pで残してOK。
+- POINT配下の3項目は h2 → <strong>h3</strong> に1段下げて階層を揃える。
+- 見た目（「POINT」を大きく目立たせる等）はCSSで指定。タグの種類とは無関係。</p>
+<hr />
+<h2>4. ページ別 h1 推奨値（各ページ1つ）</h2>
+<table>
+<thead>
+<tr>
+<th>ページ</th>
+<th>推奨 h1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>トップ</td>
+<td>麻布十番の鍼灸・マッサージ・スポーツマッサージ｜ループル治療院</td>
+</tr>
+<tr>
+<td>メニュー</td>
+<td>メニュー・料金｜トータルケア（スポーツマッサージ・鍼灸・調整）</td>
+</tr>
+<tr>
+<td>スタッフ</td>
+<td>スタッフ紹介｜麻布十番ループル治療院</td>
+</tr>
+<tr>
+<td>アクセス</td>
+<td>アクセス・地図｜麻布十番駅徒歩1分</td>
+</tr>
+<tr>
+<td>活動実績</td>
+<td>活動実績｜プロアスリート・アーティスト帯同</td>
+</tr>
+<tr>
+<td>求人情報</td>
+<td>求人情報｜麻布十番ループル治療院 スタッフ募集</td>
+</tr>
+<tr>
+<td>美容鍼（新設推奨）</td>
+<td>美容鍼｜麻布十番ループル治療院（お肌・小顔・むくみケア）</td>
+</tr>
+<tr>
+<td>お知らせ各記事</td>
+<td>（その記事のタイトルそのもの）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>各下層ページの title タグは既に適切なので、h1も上記のように主題を明確にすると相乗効果が出ます。</p>
+</blockquote>
+<hr />
+<h2>5. 注意点</h2>
+<ul>
+<li><strong>「New Agent」のh1</strong> は、サイト本体ではなく外部ウィジェット（チャット/問診ボタン等）が
+  出力している可能性が高いです。HTMLを確認し、本体のコードでなければ、そのウィジェットの設定や
+  読み込み方法を調整できないか制作者に確認してください。</li>
+<li>h2・h3も <strong>順番に</strong> 使います（h2の中にいきなりh4を置かない）。</li>
+<li>1ページに同じh2が何度あっても問題ありませんが、<strong>h1だけは必ず1つ</strong>に保ちます。</li>
+</ul>
+<h3>確認方法</h3>
+<p>ブラウザの拡張機能「HeadingsMap」や、Chromeの開発者ツールのコンソールで
+<code>document.querySelectorAll('h1').length</code> を実行し、<strong>各ページで結果が「1」になる</strong>ことを確認します。</p><a class="toplink" href="#top">▲ 目次に戻る</a></div><div class="chapter" id="ch6"><h1>麻布十番ループル治療院 — 見出し階層（h1→h2→h3）ガイド</h1>
+<p>作成日: 2026-06-15 / 更新: v2（母数データ反映） / 対象: http://www.loople.jp/（静的HTMLサイト）</p>
+<blockquote>
+<p><strong>母数反映ポイント（v2）</strong>: h1・h2に需要の大きい「鍼灸・マッサージ」を優先。母数のある「美容鍼」ページの見出し例を追加（末尾）。</p>
+</blockquote>
+<h2>1. ルール</h2>
+<p>見出しは「文書の目次（アウトライン）」です。検索エンジンはこの階層でページ構造を理解します。</p>
+<ul>
+<li><strong>h1 = ページの主題（1つだけ）</strong></li>
+<li><strong>h2 = h1の中の大きな区切り（章）</strong></li>
+<li><strong>h3 = h2の中の小区切り（節）</strong></li>
+<li><strong>段階を飛ばさない</strong>（h2の次にいきなりh4は不可）。深さは h3 までで十分。</li>
+<li>見た目の大小は <strong>CSS</strong> で調整。装飾目的でタグを選ばない。</li>
+</ul>
+<p>正しい階層のイメージ:</p>
+<pre><code>h1（ページの主題）
+├─ h2（章A）
+│   ├─ h3（節A-1）
+│   └─ h3（節A-2）
+├─ h2（章B）
+└─ h2（章C）
+</code></pre>
+<hr />
+<h2>2. トップページの現状（サイト本体のみ）</h2>
+<pre><code>h1: Loopleではお客様にあわせた丁寧なケアをします   ← h1が複数。主題が不明確
+h1: POINT
+   h2: 確かな技術
+   h2: 誠実な対応
+   h2: 豊富な経験
+h1: NEWS
+h1: GOODS
+h1: SNS
+h1: CONTACT
+</code></pre>
+<p>問題点:
+- <strong>h1が6個</strong>（本来1つ）。
+- セクションのラベル（POINT/NEWS/GOODS/SNS/CONTACT）が h1 になっている。
+- 「確かな技術」等が h2 だが、本来はその上位（POINT）が h2 であるべきなので、<strong>1段ずつズレている</strong>。
+- NEWS/GOODS/SNS/CONTACT には子見出しがなく、階層がフラット。</p>
+<blockquote>
+<p>補足: ブラウザで見ると「Search / New Agent / Vision / ファイルをアップロード / 友達を招待…」という
+見出しも検出されますが、これは<strong>ブラウザ拡張（AIエージェント）が差し込んだもので、サイトのコードではありません</strong>。
+修正対象に含めないでください。</p>
+</blockquote>
+<hr />
+<h2>3. 修正後のアウトライン（あるべき姿）</h2>
+<pre><code>h1: 麻布十番の鍼灸・マッサージ・スポーツマッサージ｜ループル治療院   ← 主題は1つ。地域＋業種を含める
+├─ h2: POINT｜ループルの特徴
+│   ├─ h3: 確かな技術
+│   ├─ h3: 誠実な対応
+│   └─ h3: 豊富な経験
+├─ h2: NEWS｜お知らせ
+├─ h2: GOODS｜ループル公式グッズ
+├─ h2: SNS
+└─ h2: CONTACT｜お問い合わせ
+</code></pre>
+<p>対応するHTML:</p>
+<pre><code class="language-html">&lt;h1&gt;麻布十番の鍼灸・マッサージ・スポーツマッサージ｜ループル治療院&lt;/h1&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;POINT｜ループルの特徴&lt;/h2&gt;
+  &lt;h3&gt;確かな技術&lt;/h3&gt;
+  &lt;h3&gt;誠実な対応&lt;/h3&gt;
+  &lt;h3&gt;豊富な経験&lt;/h3&gt;
+&lt;/section&gt;
+
+&lt;section&gt;&lt;h2&gt;NEWS｜お知らせ&lt;/h2&gt; …&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;GOODS｜ループル公式グッズ&lt;/h2&gt; …&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;SNS&lt;/h2&gt; …&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;CONTACT｜お問い合わせ&lt;/h2&gt; …&lt;/section&gt;
+</code></pre>
+<p>変更点は2つだけ:
+1. キャッチコピーの h1 → 主題の h1 に変更（キャッチコピーは <code>&lt;p&gt;</code> 等の通常テキストで残してOK）。
+2. POINT/NEWS/GOODS/SNS/CONTACT を <strong>h1 → h2</strong> に、その配下の3項目を <strong>h2 → h3</strong> に1段下げる。</p>
+<hr />
+<h2>4. 下層ページの基本パターン</h2>
+<p>各ページも「h1は1つ、章はh2、節はh3」で統一します。例：メニューページ</p>
+<pre><code>h1: メニュー・料金｜トータルケア（スポーツマッサージ・鍼灸・調整）
+├─ h2: トータルケアとは
+├─ h2: こんな方におすすめ
+├─ h2: 料金
+│   ├─ h3: 60分 11,000円
+│   ├─ h3: 90分 16,500円
+│   └─ h3: 120分 22,000円
+└─ h2: トータルケアの三本柱
+    ├─ h3: スポーツマッサージ
+    ├─ h3: 鍼灸
+    └─ h3: 調整
+</code></pre>
+<h3>美容鍼ページ（新設推奨：母数あり＝500/月レンジ）</h3>
+<pre><code>h1: 美容鍼｜麻布十番ループル治療院（お肌・小顔・むくみケア）
+├─ h2: 美容鍼とは
+├─ h2: こんな方におすすめ（むくみ・肌のハリ・小顔）
+├─ h2: 料金
+└─ h2: 施術の流れ・よくある質問
+</code></pre>
+<blockquote>
+<p>「美容鍼」「美容鍼 港区」は中母数（各500レンジ）で女性客・単価向上に直結。専用ページがない現状は機会損失のため、新設を推奨。</p>
+</blockquote>
+<hr />
+<h2>5. 確認方法</h2>
+<p>各ページで以下をチェック:</p>
+<ol>
+<li><strong>h1がちょうど1つ</strong>：開発者ツールのコンソールで <code>document.querySelectorAll('h1').length</code> → 結果が「1」。
+   ※拡張機能を切った状態で確認（拡張が差し込む見出しを除外するため）。</li>
+<li><strong>階層が飛んでいない</strong>：Chrome拡張「HeadingsMap」でアウトラインを表示し、
+   h1→h2→h3 が入れ子（インデント）で正しく並んでいるか目視。</li>
+<li>見た目が変わってしまったら、タグではなく <strong>CSS（font-size 等）</strong> で調整。</li>
+</ol><a class="toplink" href="#top">▲ 目次に戻る</a></div><div class="chapter" id="ch7"><h1>麻布十番ループル治療院 — キーワード設定ガイド</h1>
+<p>作成日: 2026-06-15 / 対象: http://www.loople.jp/</p>
+<h2>0. 前提：metaキーワードタグは「設定済みだが効果なし」</h2>
+<p><code>&lt;meta name="keywords" content="..."&gt;</code> は、現在のGoogleでは<strong>順位付けに一切使われません</strong>（2009年に公式に無効化）。
+ループルには既に設定されていますが、<strong>触らなくてOK・消さなくてOK</strong>（無害だが無効）です。
+ここでの「キーワード設定」とは、<strong>狙う検索キーワードを決め、ページの重要箇所に自然に配置する</strong>ことを指します。</p>
+<hr />
+<h2>1. 効果のある「配置場所」（重要度順）</h2>
+<table>
+<thead>
+<tr>
+<th>場所</th>
+<th>重要度</th>
+<th>ポイント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>titleタグ</strong></td>
+<td>★★★</td>
+<td>最重要。狙うキーワードを前半に入れる</td>
+</tr>
+<tr>
+<td><strong>h1（ページ主題）</strong></td>
+<td>★★★</td>
+<td>タイトルと整合させる</td>
+</tr>
+<tr>
+<td><strong>h2/h3 見出し</strong></td>
+<td>★★</td>
+<td>症状名・施術名を自然に</td>
+</tr>
+<tr>
+<td><strong>本文（特に冒頭）</strong></td>
+<td>★★</td>
+<td>詰め込まず文章として自然に</td>
+</tr>
+<tr>
+<td><strong>画像のalt</strong></td>
+<td>★</td>
+<td>画像内容＋関連語（現状20枚が"#"なので要修正）</td>
+</tr>
+<tr>
+<td><strong>URL / meta description</strong></td>
+<td>★</td>
+<td>descriptionは順位より「クリック率」に効く</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意: 同じ語を不自然に連呼する「キーワードスタッフィング」は逆効果（ペナルティ対象）。あくまで自然に。</p>
+</blockquote>
+<hr />
+<h2>2. ループルが狙うべきキーワード</h2>
+<p>検索は「<strong>地域 × 施術 × 症状</strong>」の組み合わせが基本です。ループルの強み（麻布十番・スポーツ・鍼灸・有資格者）を活かします。</p>
+<h3>A. メイン（地域×施術）— 最優先</h3>
+<ul>
+<li>麻布十番 鍼灸 / 麻布十番 はり / 麻布十番 鍼</li>
+<li>麻布十番 マッサージ / 麻布十番 スポーツマッサージ</li>
+<li>麻布十番 整体 / 麻布十番 治療院</li>
+</ul>
+<h3>B. 近隣エリア（取りこぼし防止）</h3>
+<ul>
+<li>白金高輪 鍼灸 / 南麻布 マッサージ / 六本木 整体 / 三田 鍼灸</li>
+</ul>
+<h3>C. 施術・客層の特化（差別化＝強い武器）</h3>
+<ul>
+<li>スポーツマッサージ 東京 / スポーツ鍼灸 東京 / アスリート 鍼灸</li>
+<li>ダンサー 治療 東京 / アーティスト トレーナー 帯同</li>
+</ul>
+<h3>D. 症状ロングテール（成約に近い／競合が弱い）</h3>
+<ul>
+<li>麻布十番 肩こり / 麻布十番 腰痛 鍼 / 麻布十番 頭痛</li>
+<li>麻布十番 首の痛み / 麻布十番 むくみ / 麻布十番 姿勢改善</li>
+</ul>
+<h3>E. 外国人向け（英語ページ用）</h3>
+<ul>
+<li>acupuncture azabu-juban / sports massage tokyo english / acupuncture tokyo english</li>
+</ul>
+<blockquote>
+<p>実際の検索ボリュームは <strong>Googleキーワードプランナー</strong> で確認し、A・Dを軸に優先順位を付けてください。</p>
+</blockquote>
+<hr />
+<h2>3. ページ別キーワード割り当て（1ページ1テーマ）</h2>
+<table>
+<thead>
+<tr>
+<th>ページ</th>
+<th>主キーワード</th>
+<th>title案</th>
+<th>h1案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>トップ</td>
+<td>麻布十番 鍼灸／マッサージ</td>
+<td>麻布十番の鍼灸・スポーツマッサージ｜ループル治療院</td>
+<td>麻布十番のスポーツマッサージ・鍼灸治療院 ループル</td>
+</tr>
+<tr>
+<td>メニュー</td>
+<td>麻布十番 鍼灸 料金</td>
+<td>メニュー・料金｜麻布十番の鍼灸・スポーツマッサージ</td>
+<td>メニュー・料金｜トータルケア（スポーツマッサージ・鍼灸・調整）</td>
+</tr>
+<tr>
+<td>スタッフ</td>
+<td>麻布十番 鍼灸師</td>
+<td>スタッフ紹介｜麻布十番ループル治療院の有資格者</td>
+<td>スタッフ紹介｜麻布十番ループル治療院</td>
+</tr>
+<tr>
+<td>アクセス</td>
+<td>麻布十番駅 鍼灸</td>
+<td>アクセス｜麻布十番駅徒歩1分の鍼灸・マッサージ</td>
+<td>アクセス・地図｜麻布十番駅徒歩1分</td>
+</tr>
+<tr>
+<td>活動実績</td>
+<td>スポーツトレーナー 帯同</td>
+<td>活動実績｜プロアスリート・アーティスト帯同</td>
+<td>活動実績｜プロアスリート・アーティスト帯同</td>
+</tr>
+<tr>
+<td>求人</td>
+<td>鍼灸師 求人 麻布十番</td>
+<td>求人情報｜麻布十番ループル治療院 鍼灸師・スタッフ募集</td>
+<td>求人情報｜麻布十番ループル治療院 スタッフ募集</td>
+</tr>
+<tr>
+<td>English</td>
+<td>acupuncture azabu-juban</td>
+<td>Acupuncture &amp; Sports Massage in Azabu-Juban, Tokyo</td>
+<td>Acupuncture &amp; Sports Massage in Azabu-Juban</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>各ページの狙いキーワードを title→h1→見出し→本文 で一貫させると、検索エンジンに主題が明確に伝わります。</p>
+</blockquote>
+<hr />
+<h2>4. キーワードの探し方（無料ツール）</h2>
+<ol>
+<li><strong>Googleサジェスト/関連検索</strong> … 検索窓に「麻布十番 鍼灸」と打つと出る候補＝実際の検索語。</li>
+<li><strong>Googleキーワードプランナー</strong> … 各語のおおよその検索ボリュームを確認（要Google広告アカウント・無料）。</li>
+<li><strong>ラッコキーワード等</strong> … 関連語・複合語をまとめて取得。</li>
+<li><strong>Google Search Console（移行後）</strong> … 実際に表示・クリックされた検索語がわかる。最も信頼できる一次データ。</li>
+</ol>
+<hr />
+<h2>5. まとめ</h2>
+<ul>
+<li>metaキーワードタグは<strong>現状維持でOK（効果なし）</strong>。</li>
+<li>実効性があるのは「狙う語を決めて <strong>title・h1・見出し・本文・alt</strong> に自然に配置」すること。</li>
+<li>ループルは <strong>「麻布十番×鍼灸/マッサージ」＋「スポーツ・症状ロングテール」</strong> が主戦場。</li>
+<li>構造化データ・OGP・H1の各ガイドと合わせて、ページ別に一貫したキーワード設計を行うと効果が最大化します。</li>
+</ul><a class="toplink" href="#top">▲ 目次に戻る</a></div><div class="chapter" id="ch8"><h1>チェックすべきキーワード一覧（母数調査・順位定点観測用）</h1>
+<p>作成日: 2026-06-15 / 対象: 麻布十番ループル治療院</p>
+<p>使い方：①下記を<strong>キーワードプランナー</strong>に入れて母数を取得（→手順書A）。②母数の出た語を<strong>投資優先度マップ</strong>へ（→B）。③「コアセット」は毎月順位を定点チェック。</p>
+<hr />
+<h2>1. エリア × 施術（頭の語：母数大・競合強）</h2>
+<pre><code>麻布十番 マッサージ
+麻布十番 整体
+麻布十番 鍼灸
+麻布十番 鍼
+麻布十番 はり
+麻布十番 治療院
+麻布十番 整骨院
+麻布十番 接骨院
+麻布十番 指圧
+麻布十番 もみほぐし
+麻布十番 リラクゼーション
+</code></pre>
+<h2>2. 近隣エリア（取りこぼし防止）</h2>
+<pre><code>港区 鍼灸
+港区 マッサージ
+港区 整体
+六本木 マッサージ
+六本木 鍼灸
+白金高輪 鍼灸
+白金高輪 整体
+南麻布 マッサージ
+広尾 鍼灸
+元麻布 マッサージ
+</code></pre>
+<h2>3. 施術特化（ループルの強み＝勝ちやすい）</h2>
+<pre><code>麻布十番 スポーツマッサージ
+スポーツマッサージ 東京
+スポーツマッサージ 港区
+スポーツ鍼灸 東京
+麻布十番 美容鍼
+美容鍼 港区
+アスリート 鍼灸 東京
+麻布十番 鍼灸 料金
+</code></pre>
+<h2>4. 症状ロングテール（小さいが高意図・成約に近い）</h2>
+<pre><code>麻布十番 肩こり
+麻布十番 腰痛
+麻布十番 頭痛
+麻布十番 首こり
+麻布十番 眼精疲労
+麻布十番 むくみ
+麻布十番 猫背
+麻布十番 姿勢矯正
+麻布十番 ぎっくり腰
+麻布十番 五十肩
+麻布十番 坐骨神経痛
+麻布十番 自律神経
+麻布十番 スポーツ障害
+</code></pre>
+<h2>5. 用途・状況（来店意図が強い修飾語）</h2>
+<pre><code>麻布十番 マッサージ 女性
+麻布十番 マッサージ 個室
+麻布十番 マッサージ 当日予約
+麻布十番 鍼灸 夜
+麻布十番 治療院 おすすめ
+麻布十番 鍼灸 評判
+</code></pre>
+<h2>6. 客層・特殊（差別化／ニッチ）</h2>
+<pre><code>ダンサー 治療 東京
+アーティスト 鍼灸 東京
+出張マッサージ 港区
+</code></pre>
+<h2>7. 英語（訪日・在日外国人）</h2>
+<pre><code>acupuncture azabu juban
+acupuncture tokyo english
+sports massage tokyo
+massage azabu juban
+english speaking massage tokyo
+acupuncture roppongi
+</code></pre>
+<h2>8. 指名・ブランド（流入の土台。順位は1位前提で監視）</h2>
+<pre><code>麻布十番ループル治療院
+ループル 治療院
+loople 麻布十番
+</code></pre>
+<hr />
+<h2>毎月の定点チェック用「コアセット」（厳選12語）</h2>
+<p>すべてを毎月追うのは大変なので、<strong>事業インパクトが大きい12語</strong>に絞って順位を記録するのがおすすめ。</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>キーワード</th>
+<th>狙い</th>
+<th>現状(2026-06-15)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>麻布十番 マッサージ</td>
+<td>頭の語・母数大</td>
+<td>圏外</td>
+</tr>
+<tr>
+<td>2</td>
+<td>麻布十番 整体</td>
+<td>頭の語・母数大</td>
+<td>未調査</td>
+</tr>
+<tr>
+<td>3</td>
+<td>麻布十番 鍼灸</td>
+<td>強み・中母数</td>
+<td>8位前後</td>
+</tr>
+<tr>
+<td>4</td>
+<td>麻布十番 スポーツマッサージ</td>
+<td>強み・上位</td>
+<td>4位前後</td>
+</tr>
+<tr>
+<td>5</td>
+<td>麻布十番 肩こり</td>
+<td>症状・高意図</td>
+<td>圏外</td>
+</tr>
+<tr>
+<td>6</td>
+<td>麻布十番 腰痛</td>
+<td>症状・高意図</td>
+<td>圏外</td>
+</tr>
+<tr>
+<td>7</td>
+<td>麻布十番 頭痛</td>
+<td>症状・高意図</td>
+<td>未調査</td>
+</tr>
+<tr>
+<td>8</td>
+<td>麻布十番 美容鍼</td>
+<td>拡張メニュー</td>
+<td>未調査</td>
+</tr>
+<tr>
+<td>9</td>
+<td>港区 鍼灸</td>
+<td>エリア拡張</td>
+<td>未調査</td>
+</tr>
+<tr>
+<td>10</td>
+<td>麻布十番 治療院</td>
+<td>業種総合</td>
+<td>未調査</td>
+</tr>
+<tr>
+<td>11</td>
+<td>acupuncture azabu juban</td>
+<td>外国人</td>
+<td>未調査</td>
+</tr>
+<tr>
+<td>12</td>
+<td>麻布十番ループル治療院</td>
+<td>指名</td>
+<td>1位想定（要確認）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>チェックの観点（順位を見るときに併せて記録）</h2>
+<ul>
+<li><strong>母数</strong>（キーワードプランナーの月間検索数）</li>
+<li><strong>オーガニック順位</strong>（広告・地図枠を除いた自然検索の位置）</li>
+<li><strong>地図枠（MEO）順位</strong>（ローカル3パックにループルが出るか）</li>
+<li><strong>上位の顔ぶれ</strong>（ポータルか／個人院か＝勝ちやすさ判定）</li>
+<li><strong>専用ページの有無</strong>（競合が症状別ページを持っているか）</li>
+</ul>
+<blockquote>
+<p>補足：順位は検索する場所・端末・ログイン状態で変動します。比較は<strong>同条件（シークレットウィンドウ・地域固定）</strong>で行うと精度が上がります。</p>
+</blockquote><a class="toplink" href="#top">▲ 目次に戻る</a></div><div class="chapter" id="ch9"><h1>A. キーワード母数（検索ボリューム）取得 手順書</h1>
+<p>作成日: 2026-06-15 / 対象: 麻布十番ループル治療院</p>
+<p>目的：「どの語に何人が検索しているか（母数）」を実数で把握し、SEO・MEOの投資配分を決める。</p>
+<hr />
+<h2>方法1：Googleキーワードプランナー（無料・推奨）</h2>
+<p>各語の<strong>月間平均検索数</strong>を確認できる、最も標準的な無料ツール。</p>
+<h3>準備</h3>
+<ol>
+<li><a href="https://ads.google.com/">Google広告</a> にGoogleアカウントでログイン。</li>
+<li>アカウントを作成（<strong>広告を出稿しなくても使えます</strong>。「エキスパートモード」で作成→キャンペーンはスキップ）。
+   - ※広告費0でもキーワードプランナーは使える。ただし出稿経験ゼロだと検索数が「100〜1000」のような<strong>範囲表示</strong>になる場合あり（少額出稿で精緻化される）。</li>
+</ol>
+<h3>手順</h3>
+<ol start="3">
+<li>右上「ツールと設定」→「<strong>キーワードプランナー</strong>」を開く。</li>
+<li>「<strong>検索のボリュームと予測のデータを確認する</strong>」を選択。</li>
+<li>下記の語をまとめて貼り付け（カンマ区切りでOK）：
+   <code>麻布十番 マッサージ, 麻布十番 整体, 麻布十番 鍼灸, 麻布十番 スポーツマッサージ,
+   麻布十番 肩こり, 麻布十番 腰痛, 麻布十番 頭痛, 港区 鍼灸, 港区 マッサージ,
+   麻布十番 整骨院, スポーツマッサージ 東京, 麻布十番 鍼灸 料金</code></li>
+<li>地域を「<strong>日本</strong>」（必要なら「東京都」）、言語「日本語」に設定。</li>
+<li>表示された <strong>「月間平均検索ボリューム」</strong> 列を記録。「競合性」列も参考に。</li>
+</ol>
+<h3>見方のコツ</h3>
+<ul>
+<li><strong>母数（検索数）が大きい × 競合性が低い</strong>語＝狙い目。</li>
+<li>ボリュームが範囲表示（例: 100〜1K）でも、<strong>相対比較</strong>には十分使える。</li>
+<li>「キーワード候補を取得」タブに語を入れると、<strong>関連語＋それぞれの母数</strong>も一覧で出る（症状語の発掘に有効）。</li>
+</ul>
+<hr />
+<h2>方法2：Google Search Console（HTTPS化・登録後／自社の一次データ）</h2>
+<p>自院サイトが<strong>実際に何の語で表示・クリックされたか</strong>が分かる。母数の最も信頼できる実測値。</p>
+<ol>
+<li><a href="https://search.google.com/search-console">Search Console</a> にサイトを登録（HTTPS化後に <code>https://</code> で）。</li>
+<li>「検索パフォーマンス」→「クエリ」タブ。</li>
+<li><strong>表示回数（impressions）＝その語でループルが見られた母数</strong>、クリック数、掲載順位を確認。</li>
+<li>「表示は多いが順位が低い語」＝伸びしろ。「表示も少ない語」＝そもそも母数が小さい。</li>
+</ol>
+<blockquote>
+<p>キーワードプランナーは「市場全体の母数」、Search Consoleは「自院に実際に来ている母数」。両方見ると精度が上がる。</p>
+</blockquote>
+<hr />
+<h2>方法3：補助ツール（相対把握）</h2>
+<ul>
+<li><strong>Googleサジェスト / ラッコキーワード</strong> … 実際に検索されている複合語を網羅（母数の数値は出ないが、語の存在＝需要の証拠）。</li>
+<li><strong>Googleトレンド</strong> … 語どうしの相対的な人気推移。※低母数のローカル語は「データ不足」になりやすい。</li>
+</ul>
+<hr />
+<h2>取得後にやること</h2>
+<ol>
+<li>取得した母数を <strong>B（投資優先度マップ）</strong> の表に転記。</li>
+<li>「母数 × 勝ちやすさ × 自院の強み」で狙う語を決定。</li>
+<li>半年ごとに再取得して、順位・母数の変化を追う。</li>
+</ol><a class="toplink" href="#top">▲ 目次に戻る</a></div><div class="chapter" id="ch10"><h1>母数分析 ＆ 投資優先度ランキング（実データ反映版）</h1>
+<p>作成日: 2026-06-15 / 対象: 麻布十番ループル治療院
+データ出典: Google広告キーワードプランナー「Keyword Stats」2025/6〜2026/5・日本</p>
+<blockquote>
+<p>注意: 検索数はバケット表示（50＝10〜100／500＝100〜1,000／5000＝1,000〜1万）。絶対値でなく大中小の区分として扱う。
+順位は2026-06-15時点のオーガニック概算（広告・地図枠を除く）。</p>
+</blockquote>
+<hr />
+<h2>1. 母数 × 現在順位 一覧（主要語）</h2>
+<table>
+<thead>
+<tr>
+<th>キーワード</th>
+<th>母数(月間)</th>
+<th>現順位</th>
+<th>競合の性質</th>
+<th>評価</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>麻布十番 マッサージ</td>
+<td>5000（大）</td>
+<td>圏外</td>
+<td>ポータル＋整体多数・激戦</td>
+<td>母数最大だが難</td>
+</tr>
+<tr>
+<td>六本木 マッサージ</td>
+<td>5000（大）</td>
+<td>圏外</td>
+<td>エリア外・激戦</td>
+<td>参考（徒歩圏）</td>
+</tr>
+<tr>
+<td>麻布十番 鍼灸</td>
+<td>500（中）</td>
+<td>8位前後</td>
+<td>個人鍼灸院中心</td>
+<td>★勝てる中母数</td>
+</tr>
+<tr>
+<td>麻布十番 整体</td>
+<td>500（中）</td>
+<td>圏外</td>
+<td>整体院が専用ページで占有</td>
+<td>中期</td>
+</tr>
+<tr>
+<td>麻布十番 整骨院</td>
+<td>500（中）</td>
+<td>未確認</td>
+<td>整骨院</td>
+<td>柔整資格あり該当可</td>
+</tr>
+<tr>
+<td>麻布十番 美容鍼</td>
+<td>500（中）</td>
+<td>未確認</td>
+<td>美容鍼サロン</td>
+<td>★機会（後述）</td>
+</tr>
+<tr>
+<td>美容鍼 港区</td>
+<td>500（中）</td>
+<td>未確認</td>
+<td>〃</td>
+<td>★機会</td>
+</tr>
+<tr>
+<td>港区 鍼灸</td>
+<td>500（中）</td>
+<td>未確認</td>
+<td>エリア広め</td>
+<td>中期拡張</td>
+</tr>
+<tr>
+<td>港区 マッサージ</td>
+<td>500（中）</td>
+<td>未確認</td>
+<td>激戦</td>
+<td>MEO向き</td>
+</tr>
+<tr>
+<td>麻布十番 リラクゼーション</td>
+<td>500（中）</td>
+<td>圏外</td>
+<td>リラク系</td>
+<td>意図がややズレ</td>
+</tr>
+<tr>
+<td>スポーツマッサージ 東京</td>
+<td>500（中）</td>
+<td>未確認</td>
+<td>広域・強み合致</td>
+<td>中期</td>
+</tr>
+<tr>
+<td>麻布十番 スポーツマッサージ</td>
+<td>50（小）</td>
+<td>4位前後</td>
+<td>競合弱</td>
+<td>強み・維持</td>
+</tr>
+<tr>
+<td>麻布十番 肩こり</td>
+<td>50（小）</td>
+<td>圏外</td>
+<td>整体が専用ページ</td>
+<td>高意図・低母数</td>
+</tr>
+<tr>
+<td>麻布十番 腰痛</td>
+<td>50（小）</td>
+<td>圏外</td>
+<td>〃</td>
+<td>高意図・低母数</td>
+</tr>
+<tr>
+<td>麻布十番 頭痛</td>
+<td>50（小）</td>
+<td>未確認</td>
+<td>〃</td>
+<td>高意図・低母数</td>
+</tr>
+<tr>
+<td>麻布十番 治療院</td>
+<td>50（小）</td>
+<td>未確認</td>
+<td>業種総合</td>
+<td>補助</td>
+</tr>
+<tr>
+<td>麻布十番ループル治療院</td>
+<td>500（中）</td>
+<td>1位想定</td>
+<td>指名</td>
+<td>死守</td>
+</tr>
+</tbody>
+</table>
+<p><strong>データ不足（個別対策の優先度低）</strong>: 麻布十番 マッサージ女性/当日予約、鍼灸 夜/料金、治療院おすすめ、猫背、姿勢矯正、首こり、スポーツ障害、英語各種、アスリート/アーティスト/ダンサー系。</p>
+<hr />
+<h2>2. 優先度ランキング（母数 × 勝ちやすさ × 強み × 成約）</h2>
+<h3>◎ 最優先（費用対効果が高い）</h3>
+<ol>
+<li><strong>MEOで「麻布十番 マッサージ」(母数5000) を取りに行く</strong>
+   - 自サイトのオーガニックでは激戦で勝ちにくいが、<strong>地図枠なら口コミ評価の高いループルは有利</strong>。最大母数を最も勝ちやすい場所で取る。→ チェックリストC。</li>
+<li><strong>「麻布十番 鍼灸」(母数500・現8位) をSEOで上位化</strong>
+   - 中母数 × 競合が個人院 × ループルの強み。技術SEO（HTTPS・構造化データ・H1）＋鍼灸専用コンテンツで一番伸ばしやすい自サイト施策。</li>
+<li><strong>「美容鍼」ページ新設（麻布十番 美容鍼＋美容鍼 港区＝合計の母数あり）</strong>
+   - 母数500が2語。女性客・単価向上に直結。ループルは美容鍼を提供しているので、<strong>専用ページがないのは機会損失</strong>。新規作成の価値が最も高い。</li>
+</ol>
+<h3>○ 中期（コンテンツ整備で狙う）</h3>
+<ol start="4">
+<li><strong>「麻布十番 整体」「港区 鍼灸/マッサージ」(各500)</strong> … 中母数。整体は競合強いが、港区系はエリア拡張で取りやすい。</li>
+<li><strong>指名「麻布十番ループル治療院」(500)</strong> … 1位を死守（OGP・構造化データで検索結果の見栄えも強化）。</li>
+</ol>
+<h3>△ 低コストで維持／面取り</h3>
+<ol start="6">
+<li><strong>「麻布十番 スポーツマッサージ」(50・現4位)</strong> … 母数は小さいが強み×上位。低コストで順位維持。</li>
+<li><strong>症状ページ（肩こり/腰痛/頭痛ほか 各50）</strong> … 1語は小さいので<strong>個別に量産せず、「症状別」1〜数ページにまとめる</strong>のが効率的。高意図で成約に効くが、母数が小さいので投資は控えめに。</li>
+</ol>
+<h3>✕ 個別対策しない</h3>
+<ol start="8">
+<li>データ不足語（女性/当日予約/夜/料金/猫背/首こり/英語各種等）… 既存ページ内で軽く触れる程度。英語は母数小だが「差別化」目的で英語ページ整備の文脈で対応。</li>
+</ol>
+<hr />
+<h2>3. 結論（母数の懸念への回答）</h2>
+<ul>
+<li><strong>症状語（肩こり・腰痛・頭痛）は母数50で最小</strong>。ここに大きく投資しても集客インパクトは限定的 → <strong>過剰投資しない</strong>。</li>
+<li><strong>母数があるのは「マッサージ(大)」「鍼灸・整体・美容鍼(中)」</strong>。</li>
+<li>したがって配分は：
+  1. <strong>MEO最優先</strong>（マッサージの大母数を地図で回収）
+  2. <strong>鍼灸のSEO上位化</strong>（中母数×勝てる×強み）
+  3. <strong>美容鍼ページ新設</strong>（中母数×単価×女性客）
+  4. スポーツマッサージは維持、症状語はまとめページで面取り。</li>
+<li>次の精緻化：<strong>Search Console（HTTPS化後）</strong>でループスの実際の表示語・流入を取得し、このランキングを実データで補正する。</li>
+</ul><a class="toplink" href="#top">▲ 目次に戻る</a></div><div class="chapter" id="ch11"><h1>B. SEO/MEO 投資優先度マップ（テンプレート）</h1>
+<p>作成日: 2026-06-15 / 対象: 麻布十番ループル治療院</p>
+<p>「どの語に労力をかけるか」を、<strong>母数 × 勝ちやすさ × 自院の強み × 成約しやすさ</strong>で決めるためのワークシート。
+母数は <strong>A（キーワードプランナー）</strong> で取得した数値を入れて使う。</p>
+<hr />
+<h2>1. 評価軸（各5点で採点）</h2>
+<table>
+<thead>
+<tr>
+<th>軸</th>
+<th>意味</th>
+<th>高得点の条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>母数</td>
+<td>月間検索数</td>
+<td>検索数が多い</td>
+</tr>
+<tr>
+<td>勝ちやすさ</td>
+<td>競合の弱さ</td>
+<td>ポータル/強豪が少ない、現順位が近い</td>
+</tr>
+<tr>
+<td>強み適合</td>
+<td>ループルの得意との一致</td>
+<td>鍼灸・スポーツ・実績と合う</td>
+</tr>
+<tr>
+<td>成約期待</td>
+<td>来院に繋がる意図</td>
+<td>症状・料金など"今すぐ客"の語</td>
+</tr>
+</tbody>
+</table>
+<p><strong>優先スコア = 母数 + 勝ちやすさ + 強み適合 + 成約期待（20点満点）</strong></p>
+<hr />
+<h2>2. 記入テンプレート（現時点の調査結果を反映、母数は要記入）</h2>
+<table>
+<thead>
+<tr>
+<th>キーワード</th>
+<th>現在の順位※</th>
+<th>母数(月間)※要記入</th>
+<th>勝ちやすさ</th>
+<th>強み適合</th>
+<th>成約期待</th>
+<th>優先スコア</th>
+<th>方針</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>麻布十番 スポーツマッサージ</td>
+<td>4位前後</td>
+<td>___</td>
+<td>4</td>
+<td>5</td>
+<td>4</td>
+<td>＝</td>
+<td>維持・強化</td>
+</tr>
+<tr>
+<td>麻布十番 鍼灸</td>
+<td>8位前後</td>
+<td>___</td>
+<td>3</td>
+<td>5</td>
+<td>4</td>
+<td>＝</td>
+<td>改善（上位化）</td>
+</tr>
+<tr>
+<td>麻布十番 肩こり</td>
+<td>圏外</td>
+<td>___</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>＝</td>
+<td>症状別ページ新規</td>
+</tr>
+<tr>
+<td>麻布十番 腰痛</td>
+<td>圏外</td>
+<td>___</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>＝</td>
+<td>症状別ページ新規</td>
+</tr>
+<tr>
+<td>麻布十番 マッサージ</td>
+<td>圏外</td>
+<td>___</td>
+<td>1</td>
+<td>3</td>
+<td>3</td>
+<td>＝</td>
+<td>MEO＋ポータルで対応</td>
+</tr>
+<tr>
+<td>麻布十番 整体</td>
+<td>未調査</td>
+<td>___</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>＝</td>
+<td>MEO＋ポータル</td>
+</tr>
+<tr>
+<td>港区 鍼灸</td>
+<td>未調査</td>
+<td>___</td>
+<td>2</td>
+<td>4</td>
+<td>3</td>
+<td>＝</td>
+<td>中期で狙う</td>
+</tr>
+<tr>
+<td>麻布十番 頭痛</td>
+<td>未調査</td>
+<td>___</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>＝</td>
+<td>症状別ページ候補</td>
+</tr>
+</tbody>
+</table>
+<p>※順位は2026-06-15時点のオーガニック概算。母数列はキーワードプランナーの数値を記入し、5段階に換算して優先スコアを算出。</p>
+<hr />
+<h2>3. 母数の大小で「打ち手」を変える（重要）</h2>
+<table>
+<thead>
+<tr>
+<th>母数</th>
+<th>例</th>
+<th>最適な打ち手</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>大</strong></td>
+<td>麻布十番 マッサージ／整体、近くのマッサージ</td>
+<td><strong>MEO（地図枠）＋ポータル掲載</strong>。単独サイトのオーガニックは勝ちにくい</td>
+</tr>
+<tr>
+<td><strong>中</strong></td>
+<td>麻布十番 鍼灸、港区 鍼灸</td>
+<td><strong>自サイトSEO</strong>で上位化（専用コンテンツ＋技術SEO）</td>
+</tr>
+<tr>
+<td><strong>小・高意図</strong></td>
+<td>肩こり/腰痛/頭痛、スポーツマッサージ</td>
+<td><strong>症状別ページの積み上げ</strong>。1語は小さいが合算＆高成約</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>結論：母数が小さい語の順位を磨くより、<strong>母数の大きいMEO/ポータルで露出を取りつつ、高意図の症状語を面で押さえる</strong>のが店舗SEOの定石。</p>
+</blockquote>
+<hr />
+<h2>4. 推奨アクション順（母数取得後に確定）</h2>
+<ol>
+<li><strong>MEO最優先</strong>（→ C のチェックリスト）：母数が一番大きい"地図＋近くで探す"層を取る。</li>
+<li><strong>症状別ページ新規作成</strong>：肩こり・腰痛・頭痛（高意図・競合に倣う）。</li>
+<li><strong>鍼灸の上位化</strong>：技術SEO＋鍼灸専用コンテンツ。</li>
+<li><strong>スポーツマッサージ維持</strong>：強み領域。低コストで順位保持。</li>
+<li><strong>ポータル掲載検討</strong>：母数の大きい頭の語の受け皿。</li>
+</ol><a class="toplink" href="#top">▲ 目次に戻る</a></div><div class="chapter" id="ch12"><h1>C. MEO（Googleビジネスプロフィール）最適化チェックリスト</h1>
+<p>作成日: 2026-06-15 / 更新: v2（母数データ反映） / 対象: 麻布十番ループル治療院</p>
+<blockquote>
+<p><strong>母数反映ポイント（v2）</strong>: 「麻布十番 マッサージ」は母数5000（最大）で自サイトでは激戦。だが<strong>地図枠なら口コミ評価の高いループルが有利</strong>＝最大母数をMEOで回収するのが最優先。
+カテゴリに「マッサージ店／鍼灸院」、サービスに「美容鍼」（母数500・機会大）を必ず登録する。</p>
+</blockquote>
+<p>店舗集客で<strong>母数が最も大きいのはGoogleマップ／ローカル検索</strong>（「麻布十番 マッサージ」「近くの鍼灸」等＋地図枠）。
+ループルは口コミ評価が高い（サイト上で No.2/32 表示）ため、ここを整えるのが最短で効果が出る。</p>
+<blockquote>
+<p>前提：Googleビジネスプロフィール（GBP）のオーナー確認（owner verification）が済んでいること。
+未確認なら最優先で取得（Googleで「麻布十番ループル治療院」を検索→「ビジネスオーナーですか？」から申請）。</p>
+</blockquote>
+<hr />
+<h2>現状スナップショット（2026-06-15 時点・Googleマップ実査）</h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>現状</th>
+<th>評価</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>評価</td>
+<td><strong>4.9（口コミ251件）</strong></td>
+<td>◎ エリア屈指。MEOの最大の武器</td>
+</tr>
+<tr>
+<td>カテゴリ</td>
+<td><strong>「整体」のみ</strong></td>
+<td>✕ 最大の問題（下記）</td>
+</tr>
+<tr>
+<td>住所/電話/サイト/サービス</td>
+<td>登録あり（〒106-0045 麻布十番4-6-8 5階）</td>
+<td>○</td>
+</tr>
+<tr>
+<td>口コミ返信</td>
+<td>ほぼ全件に返信</td>
+<td>◎</td>
+</tr>
+<tr>
+<td>オーナー投稿</td>
+<td>最新5日前・日英バイリンガル</td>
+<td>◎</td>
+</tr>
+<tr>
+<td>口コミタグ</td>
+<td>空間26・スポーツ17・<strong>美容鍼15</strong>・スッキリ14</td>
+<td>美容鍼の需要が実証</td>
+</tr>
+<tr>
+<td>「麻布十番 マッサージ」マップ順位</td>
+<td>圏外（上位は指圧・マッサージ/エステ系）</td>
+<td>✕</td>
+</tr>
+<tr>
+<td>「麻布十番 鍼灸」マップ順位</td>
+<td>圏外（上位は鍼灸院カテゴリの競合）</td>
+<td>✕</td>
+</tr>
+</tbody>
+</table>
+<p><strong>診断</strong>: 評価・口コミ・運用は地域トップ級で理想的。にもかかわらず母数の大きい「マッサージ」「鍼灸」のマップ検索で圏外なのは、<strong>カテゴリが「整体」だけで、マッサージ店・鍼灸院として登録されていないため</strong>。上位競合はそれぞれ「鍼灸院」「指圧・マッサージ」で登録済み。<strong>カテゴリ修正が最優先・最大の伸びしろ</strong>。</p>
+<hr />
+<h2>★最優先タスク：カテゴリ修正の具体手順（GBPのどこを触るか）</h2>
+<ol>
+<li><strong>編集画面を開く</strong>: Googleで「麻布十番ループル治療院」を検索（オーナーアカウントでログイン）→ 表示される自店の管理パネル、またはマップアプリの自店ページ →「<strong>プロフィールを編集</strong>」。
+   - PCの場合: business.google.com → 該当ビジネス選択 →「編集」。</li>
+<li><strong>「カテゴリ」項目を開く</strong>（基本情報の中）。</li>
+<li><strong>メインカテゴリを見直す</strong>:
+   - 鍼灸が主軸なら「<strong>鍼灸院</strong>」、マッサージ主軸なら「<strong>マッサージ店／指圧・マッサージ</strong>」をメインに。
+   - ※メインは1つだけ。自院の一番の売り＋母数を考えて選ぶ（推奨：鍼灸院 or マッサージ店）。</li>
+<li><strong>追加カテゴリを登録</strong>（複数可・ここが重要）:
+   - 「指圧・マッサージ（マッサージ店）」
+   - 「鍼灸院」
+   - 「スポーツマッサージ／スポーツ整体」（候補に出れば）
+   - 「美容鍼（鍼灸関連）」（候補に出れば）
+   - 「整体」（現状維持）
+   - ※入力欄に「マッサージ」「鍼灸」「美容」等と打つと、Googleが用意した正式カテゴリ候補が出る。<strong>候補にあるものだけ選べる</strong>（自由記述不可）。</li>
+<li><strong>保存</strong>。反映に数時間〜数日かかる場合あり。</li>
+<li><strong>確認</strong>: 数日後に「麻布十番 マッサージ」「麻布十番 鍼灸」でマップ検索し、ループルが表示されるか／順位が上がったかをチェック。</li>
+</ol>
+<blockquote>
+<p>注意: カテゴリは「実際に提供しているサービス」に合致している必要があります（ガイドライン）。ループルは鍼灸・マッサージ・美容鍼を実際に行っているため、これらの追加は適正。集客目的だけの無関係カテゴリ追加はNG。</p>
+</blockquote>
+<hr />
+<h2>1. 基本情報（NAP）の整備 ★最重要</h2>
+<ul>
+<li>☐ 店舗名は正式名称のみ（「麻布十番ループル治療院」）。キーワードの詰め込みはガイドライン違反。</li>
+<li>☐ 住所が公式サイト・各ポータルと<strong>完全一致</strong>（表記揺れなし）。</li>
+<li>☐ 電話番号を統一（サイトの tel: と同じ番号）。</li>
+<li>☐ 営業時間（10:00〜19:00）を登録。<strong>不定休は「特別営業時間」で都度更新</strong>。</li>
+<li>☐ 公式サイトURLを登録（<strong>HTTPS化後は https:// に更新</strong>）。</li>
+<li>☐ 予約リンク（LINE/電話/フォーム）を「予約」属性に設定。</li>
+</ul>
+<h2>2. カテゴリ設定 ★順位に直結</h2>
+<ul>
+<li>☐ メインカテゴリを適切に（例：「鍼灸院」または「マッサージ店」）。<strong>母数最大の「マッサージ」で見つかるよう「マッサージ店」を必ず含める</strong>。</li>
+<li>☐ サブカテゴリを追加（鍼灸院／マッサージ／スポーツ整体／<strong>美容鍼</strong>／整体 等、該当するものを複数）。</li>
+<li>☐ 競合上位（カッパ整体院・こころ整体院等）のカテゴリ設定も参考に。</li>
+</ul>
+<h2>3. 写真・動画</h2>
+<ul>
+<li>☐ 外観（看板が分かるもの＝初回来院者が迷わない）。</li>
+<li>☐ 内観（清潔感が口コミの評価点なので強調）。</li>
+<li>☐ 施術風景・スタッフ（有資格者11名は強み）。</li>
+<li>☐ ロゴ・カバー写真。</li>
+<li>☐ 定期的に追加（更新頻度も評価される）。</li>
+</ul>
+<h2>4. 口コミ運用 ★MEOの肝</h2>
+<ul>
+<li>☐ 口コミに<strong>必ず返信</strong>（全件）。Googleは返信を評価。</li>
+<li>☐ 来院者へ口コミ依頼の導線（会計時カード・LINE・QR）。</li>
+<li>☐ 症状・施術名が自然に入った口コミが集まると、その語での表示に有利
+      （例:「肩こりが楽に」「スポーツマッサージで」）。</li>
+<li>☐ ネガティブ口コミにも丁寧に対応（誠実さが伝わる）。</li>
+</ul>
+<h2>5. 投稿（Googleポスト）</h2>
+<ul>
+<li>☐ 「最新情報」を定期投稿（キャンペーン・休診・コラム）。サイトのNEWSと連動。</li>
+<li>☐ 「特典」「イベント」も活用。</li>
+</ul>
+<h2>6. 商品・サービス・属性</h2>
+<ul>
+<li>☐ サービス一覧に施術メニューと料金を登録（トータルケア60分11,000円〜、<strong>美容鍼</strong>＝母数500の需要あり）。</li>
+<li>☐ 属性（バリアフリー、キャッシュレス、女性スタッフ、英語対応 等）を設定。</li>
+<li>☐ <strong>英語対応</strong>を属性・説明に明記（麻布十番＝外国人需要）。</li>
+</ul>
+<h2>7. ビジネス説明文</h2>
+<ul>
+<li>☐ 750文字以内で、麻布十番・<strong>鍼灸・マッサージ・美容鍼</strong>・スポーツマッサージ・有資格者・実績を自然に記述（母数の大きい語を優先）。</li>
+<li>☐ 不自然なキーワード羅列はNG。</li>
+</ul>
+<h2>8. 計測・改善</h2>
+<ul>
+<li>☐ GBPの「インサイト」で、表示された検索語・電話タップ・ルート検索・サイト遷移を毎月確認
+      （= <strong>MEO経由の母数の実測</strong>）。</li>
+<li>☐ サイトの構造化データ（LocalBusiness）とGBPの情報を一致させる（相互補強）。</li>
+</ul>
+<hr />
+<h2>優先順位（まずこの3つ）</h2>
+<ol>
+<li><strong>オーナー確認＋NAP統一＋カテゴリ最適化</strong>（土台）。</li>
+<li><strong>口コミ返信の徹底＋依頼導線</strong>（評価が高い強みを伸ばす）。</li>
+<li><strong>写真追加＋定期投稿</strong>（鮮度・情報量）。</li>
+</ol>
+<blockquote>
+<p>SEO（自サイト）とMEO（マップ）は別物だが連動する。HTTPS化・構造化データ・サイトのNAPを
+GBPと揃えることで、地図枠・検索枠の両方で見つけられやすくなる。</p>
+</blockquote><a class="toplink" href="#top">▲ 目次に戻る</a></div></div></div></body></html>
