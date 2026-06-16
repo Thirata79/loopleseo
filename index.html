@@ -135,7 +135,7 @@ ul,ol{padding-left:22px;} li{margin:4px 0;} strong{color:#11202e;}
   <li><span class="pri-tag">必須</span><strong>HTTPS化</strong> — httpsで接続不可。個人情報・医療情報を扱うため信頼性・コンプラ・SEOで必須。S3配信のためCloudFront＋ACMで対応（時間がかかるので早期着手）。</li>
   <li><span class="pri-tag mid">SEO土台</span><strong>構造化データ(LocalBusiness)＋sitemap.xml/robots.txt設置</strong> — いずれも未設置（404）。検索の店舗情報枠・インデックス効率に直結。</li>
   <li><span class="pri-tag mid">任意</span><strong>美容鍼は"受け皿"として維持</strong> — 麻布十番にレジェンド級の競合がいるため順位狙いは非効率。コンテンツはメニュー内に既出なので、GBP/メニューに載せて新規の取りこぼしを防ぐ程度に（独立ページ化は余力があれば）。</li>
-  <li><span class="pri-tag mid">SEO</span><strong>meta description個別化・OGP・H1/見出し整理・alt修正</strong> — 全ページ同一description、OGP無し、h1が7個、画像alt 20個が「#」。</li>
+  <li><span class="pri-tag mid">SEO</span><strong>meta description個別化・OGP・H1/見出し整理・alt修正</strong> — 全ページ同一description、OGP無し、h1が6個（POINT/NEWS等を乱用）、画像alt 20個が「#」。</li>
   <li><span class="pri-tag">信頼</span><strong>プライバシーポリシー掲載</strong> — フォーム・問診票で個人情報を収集するのに不在。</li>
 </ol>
 </div>
@@ -145,7 +145,7 @@ ul,ol{padding-left:22px;} li{margin:4px 0;} strong{color:#11202e;}
 <tr><th>項目</th><th>判定</th><th>所見</th></tr>
 <tr><td>titleタグ</td><td class="mk-mid">△</td><td>ページ別に設定済みで適切。トップは地域＋業種キーワードを強化余地。</td></tr>
 <tr><td>meta description</td><td class="mk-bad">×</td><td>全6ページで<strong>同一</strong>。ページごとに最適化が必要。</td></tr>
-<tr><td>h1・見出し階層</td><td class="mk-bad">×</td><td>トップにh1が7個（POINT/NEWS等を乱用）。1ページ1つ＋h2/h3階層へ。</td></tr>
+<tr><td>h1・見出し階層</td><td class="mk-bad">×</td><td>トップにh1が6個（POINT/NEWS等を乱用）。1ページ1つ＋h2/h3階層へ。</td></tr>
 <tr><td>OGP / Twitterカード</td><td class="mk-bad">×</td><td>未設定。SNS共有時にタイトル・画像が出ない。</td></tr>
 <tr><td>構造化データ(LocalBusiness)</td><td class="mk-bad">×</td><td>未実装。店舗情報枠・口コミ表示で不利。最優先級。</td></tr>
 <tr><td>画像alt</td><td class="mk-bad">×</td><td>主要画像20点のaltが「#」のダミー値。</td></tr>
@@ -631,15 +631,17 @@ HTTPS化後は、内部の <code>http://</code> をすべて <code>https://</cod
 </blockquote>
 <hr />
 <h2>2. 現状の問題（トップページ）</h2>
-<p>トップページに <strong>h1が7個</strong> 入っています:</p>
+<p>トップページに <strong>h1が6個</strong> 入っています:</p>
 <pre><code>h1: Loopleではお客様にあわせた丁寧なケアをします
 h1: POINT
 h1: NEWS
 h1: GOODS
 h1: SNS
 h1: CONTACT
-h1: New Agent   ← 外部チャット/問診ウィジェットが出力している可能性大（要確認）
 </code></pre>
+<blockquote>
+<p>補足：解析時に「New Agent」というh1も検出されましたが、これは<strong>ブラウザ拡張（AIエージェント）が画面に差し込んだもので、サイト本体のコードではありません</strong>。診断対象から除外しています。</p>
+</blockquote>
 <p>「POINT / NEWS / GOODS / SNS / CONTACT」はセクションのラベルなので、本来 <strong>h2</strong> にすべきです。
 正しくは「h1は1つ、各セクション見出しはh2、その中の小見出しはh3」という構造にします。</p>
 <hr />
@@ -737,15 +739,13 @@ h1: New Agent   ← 外部チャット/問診ウィジェットが出力して�
 <hr />
 <h2>5. 注意点</h2>
 <ul>
-<li><strong>「New Agent」のh1</strong> は、サイト本体ではなく外部ウィジェット（チャット/問診ボタン等）が
-  出力している可能性が高いです。HTMLを確認し、本体のコードでなければ、そのウィジェットの設定や
-  読み込み方法を調整できないか制作者に確認してください。</li>
+<li>「New Agent」等の見出しは<strong>ブラウザ拡張が差し込んだ表示</strong>で、サイトのコードではないため<strong>修正不要</strong>（診断対象外）。サイト本体のh1だけを見て整理します。</li>
 <li>h2・h3も <strong>順番に</strong> 使います（h2の中にいきなりh4を置かない）。</li>
-<li>1ページに同じh2が何度あっても問題ありませんが、<strong>h1だけは必ず1つ</strong>に保ちます。</li>
+<li>1ページに同じh2が何度あっても問題ありませんが、<strong>h1は原則1つ</strong>に保ちます（複数でも即ペナルティではないが、主題を示す1つに整理するのが分かりやすい）。</li>
 </ul>
 <h3>確認方法</h3>
-<p>ブラウザの拡張機能「HeadingsMap」や、Chromeの開発者ツールのコンソールで
-<code>document.querySelectorAll('h1').length</code> を実行し、<strong>各ページで結果が「1」になる</strong>ことを確認します。</p><a class="toplink" href="#top">▲ 目次に戻る</a></div><div class="chapter" id="ch6"><h1>麻布十番ループル治療院 — 見出し階層（h1→h2→h3）ガイド</h1>
+<p><strong>ブラウザ拡張を切った状態で</strong>、Chromeの開発者ツールのコンソールで
+<code>document.querySelectorAll('h1').length</code> を実行し、<strong>各ページで結果が「1」になる</strong>ことを確認します（拡張が差し込むh1を除外するため）。</p><a class="toplink" href="#top">▲ 目次に戻る</a></div><div class="chapter" id="ch6"><h1>麻布十番ループル治療院 — 見出し階層（h1→h2→h3）ガイド</h1>
 <p>作成日: 2026-06-15 / 更新: v2（母数データ反映） / 対象: http://www.loople.jp/（静的HTMLサイト）</p>
 <blockquote>
 <p><strong>母数反映ポイント（v2）</strong>: h1・h2に需要の大きい「鍼灸・マッサージ」を優先。母数のある「美容鍼」ページの見出し例を追加（末尾）。</p>
